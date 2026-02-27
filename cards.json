@@ -5,11 +5,11 @@
       "question": "List the three mechanical layers of the Glomerular Filtration Barrier and the primary proteins of the final sieve.",
       "answer": "1.fenestrated endothelium of the capillaries (restricts cells and large molucules)\n2. glomerular basement membrane (type 4 collagen, negative charge)\n3. podocyte foot processes (slit diaphragms prevent large molecules entering)",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20512,
+      "lastReviewed": 1772206186161
     },
     {
       "id": "nxfcqb0hm5",
@@ -465,7 +465,7 @@
     {
       "id": "8loqmxlrtn",
       "question": "Why NSAIDs precipitate AKI in a dehydrated child",
-      "answer": "In dehydration:\n\nRenal perfusion pressure falls.\n\nRAAS activates.\n\nBut there is another protective mechanism: prostaglandins.\n\nProstaglandins dilate the afferent arteriole.\n\nThey preserve blood flow into the glomerulus.\n\nNSAIDs block prostaglandin synthesis.\n\nSo the afferent arteriole constricts.\n\nInflow decreases.\n\nGlomerular hydrostatic pressure falls.\n\nGFR drops.\n\nSo:\n\nACE inhibitors \u2192 efferent dilation problem\n\nNSAIDs \u2192 afferent constriction problem\n\nIn dehydration you need both arterioles cooperating. Remove prostaglandins and filtration collapses.",
+      "answer": "In dehydration:\n\nRenal perfusion pressure falls.\n\nRAAS activates.\n\nBut there is another protective mechanism: prostaglandins.\n\nProstaglandins dilate the afferent arteriole.\n\nThey preserve blood flow into the glomerulus.\n\nNSAIDs block prostaglandin synthesis.\n\nSo the afferent arteriole constricts.\n\nInflow decreases.\n\nGlomerular hydrostatic pressure falls.\n\nGFR drops.\n\nSo:\n\nACE inhibitors → efferent dilation problem\n\nNSAIDs → afferent constriction problem\n\nIn dehydration you need both arterioles cooperating. Remove prostaglandins and filtration collapses.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -487,7 +487,7 @@
     {
       "id": "b5swuh4sq5",
       "question": "Why minimal change disease causes selective proteinuria",
-      "answer": "Minimal change disease:\n\nPodocyte foot process effacement.\n\nLoss of slit diaphragm integrity.\n\nLoss of negative charge barrier.\n\nAlbumin is small and negatively charged.\n\nLoss of charge selectivity \u2192 albumin leaks.\n\nLarge proteins still mostly retained.\n\nSo proteinuria is selective (mainly albumin).\n\nBecause structure isn\u2019t grossly destroyed (no scarring), other proteins are less involved.\n\nHence:\n\nMassive albuminuria.\n\nLow serum albumin.\n\nNormal complement.\n\nNormal light microscopy.",
+      "answer": "Minimal change disease:\n\nPodocyte foot process effacement.\n\nLoss of slit diaphragm integrity.\n\nLoss of negative charge barrier.\n\nAlbumin is small and negatively charged.\n\nLoss of charge selectivity → albumin leaks.\n\nLarge proteins still mostly retained.\n\nSo proteinuria is selective (mainly albumin).\n\nBecause structure isn’t grossly destroyed (no scarring), other proteins are less involved.\n\nHence:\n\nMassive albuminuria.\n\nLow serum albumin.\n\nNormal complement.\n\nNormal light microscopy.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1070,7 +1070,7 @@
     {
       "id": "ulbd98ll7o",
       "question": "What is the effect of ADH on urine?",
-      "answer": "Increased water reabsorption \u2192 concentrated urine",
+      "answer": "Increased water reabsorption → concentrated urine",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1081,7 +1081,7 @@
     {
       "id": "2xxpz28lvp",
       "question": "What happens to the collecting duct without ADH?",
-      "answer": "Becomes impermeable to water \u2192 dilute urine",
+      "answer": "Becomes impermeable to water → dilute urine",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1542,7 +1542,7 @@
     },
     {
       "id": "rctzf2yceo",
-      "question": "Child with persistent microscopic haematuria + family history of renal failure + sensorineural hearing loss \u2192 most likely diagnosis?Alport syndrome",
+      "question": "Child with persistent microscopic haematuria + family history of renal failure + sensorineural hearing loss → most likely diagnosis?Alport syndrome",
       "answer": "Alport syndrome",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1641,7 +1641,7 @@
     },
     {
       "id": "jk0vb6hivw",
-      "question": "Child with persistent haematuria but normal complements and no systemic features \u2192 inherited structural cause should be considered. Which?Alport syndrome",
+      "question": "Child with persistent haematuria but normal complements and no systemic features → inherited structural cause should be considered. Which?Alport syndrome",
       "answer": "Alport syndrome",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1652,7 +1652,7 @@
     },
     {
       "id": "ljkll346dl",
-      "question": "Familial haematuria with normal hearing and no progression to CKD \u2192 most likely diagnosis?",
+      "question": "Familial haematuria with normal hearing and no progression to CKD → most likely diagnosis?",
       "answer": "Thin basement membrane disease",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1674,7 +1674,7 @@
     },
     {
       "id": "xeprmh3f3d",
-      "question": "Haematuria occurring during intercurrent infections with otherwise normal hearing \u2192 more suggestive of what diagnosis?IgA nephropathy",
+      "question": "Haematuria occurring during intercurrent infections with otherwise normal hearing → more suggestive of what diagnosis?IgA nephropathy",
       "answer": "IgA nephropathy",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1784,7 +1784,7 @@
     },
     {
       "id": "24zgdmvk56",
-      "question": "Girl with isolated microscopic haematuria and X-linked family history \u2192 likely carrier of what condition?Alport syndrome",
+      "question": "Girl with isolated microscopic haematuria and X-linked family history → likely carrier of what condition?Alport syndrome",
       "answer": "Alport syndrome",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1795,7 +1795,7 @@
     },
     {
       "id": "eszbde67ew",
-      "question": "Child with generalised oedema + heavy proteinuria: what syndrome pattern is this (name the \"engine\")?Nephrotic syndrome = podocyte/filtration barrier leak \u2192 nephrotic-range proteinuria \u2192 hypoalbuminaemia/oedema",
+      "question": "Child with generalised oedema + heavy proteinuria: what syndrome pattern is this (name the \"engine\")?Nephrotic syndrome = podocyte/filtration barrier leak → nephrotic-range proteinuria → hypoalbuminaemia/oedema",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephroticSyndrome",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1806,7 +1806,7 @@
     },
     {
       "id": "xdphn3j07n",
-      "question": "Nephrotic-range proteinuria in children is typically uPCR \u2265 {{c1::200 mg/mmol}} (or equivalent nephrotic-range measure).uPCR \u2265200 mg/mmol = nephrotic range",
+      "question": "Nephrotic-range proteinuria in children is typically uPCR ≥ {{c1::200 mg/mmol}} (or equivalent nephrotic-range measure).uPCR ≥200 mg/mmol = nephrotic range",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephroticSyndrome",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1817,7 +1817,7 @@
     },
     {
       "id": "6o5myteaba",
-      "question": "Serum albumin in nephrotic syndrome is typically {{c1::<25 g/L}}, explaining low oncotic pressure/oedema.Low albumin \u2192 oedema risk",
+      "question": "Serum albumin in nephrotic syndrome is typically {{c1::<25 g/L}}, explaining low oncotic pressure/oedema.Low albumin → oedema risk",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephroticSyndrome",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1839,7 +1839,7 @@
     },
     {
       "id": "5ah3xmj7vy",
-      "question": "Classic TAS pattern: age 2\u20136, periorbital oedema, normal BP, no macroscopic haematuria, normal U&E, normal complement \u2192 most likely diagnosis?Minimal change disease (MCD)",
+      "question": "Classic TAS pattern: age 2–6, periorbital oedema, normal BP, no macroscopic haematuria, normal U&E, normal complement → most likely diagnosis?Minimal change disease (MCD)",
       "answer": "Minimal change disease (MCD)",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -1861,8 +1861,8 @@
     },
     {
       "id": "1nl9e3n7qo",
-      "question": "Expected steroid response in MCD: when should you expect remission of proteinuria (exam rule-of-thumb)?Usually within 1\u20132 weeks (up to 4 weeks); no remission \u2192 think steroid resistant",
-      "answer": "Usually within 1\u20132 weeks (up to 4 weeks); no remission \u2192 think steroid resistant",
+      "question": "Expected steroid response in MCD: when should you expect remission of proteinuria (exam rule-of-thumb)?Usually within 1–2 weeks (up to 4 weeks); no remission → think steroid resistant",
+      "answer": "Usually within 1–2 weeks (up to 4 weeks); no remission → think steroid resistant",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1884,7 +1884,7 @@
     {
       "id": "akfi3g3ugp",
       "question": "Nephrotic vs nephritic: which ONE discriminator is most useful at the bedside?",
-      "answer": "Haematuria + HTN/oliguria \u2192 nephritic; massive oedema + heavy proteinuria \u2192 nephrotic",
+      "answer": "Haematuria + HTN/oliguria → nephritic; massive oedema + heavy proteinuria → nephrotic",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1928,7 +1928,7 @@
     {
       "id": "r29la1zyun",
       "question": "Link card: why does nephrotic syndrome cause hyperlipidaemia?",
-      "answer": "Liver ramps up lipoprotein synthesis in response to low oncotic pressure (\u00b1 reduced lipid clearance)",
+      "answer": "Liver ramps up lipoprotein synthesis in response to low oncotic pressure (± reduced lipid clearance)",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1939,7 +1939,7 @@
     {
       "id": "cjwan7d5fq",
       "question": "Link card: primary mechanism of oedema in nephrotic syndrome (one sentence).",
-      "answer": "Hypoalbuminaemia \u2192 \u2193 plasma oncotic pressure \u2192 fluid shifts interstitially (often with secondary Na\u207a retention)",
+      "answer": "Hypoalbuminaemia → ↓ plasma oncotic pressure → fluid shifts interstitially (often with secondary Na⁺ retention)",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1950,7 +1950,7 @@
     {
       "id": "fosxopjfos",
       "question": "Common pitfall: does \"oedema\" always mean intravascular fluid overload in nephrotic syndrome?",
-      "answer": "No \u2014 can be intravascularly depleted (\"underfilled\") despite oedema",
+      "answer": "No — can be intravascularly depleted (\"underfilled\") despite oedema",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1960,8 +1960,8 @@
     },
     {
       "id": "390x1vk06m",
-      "question": "Nephrotic child with oedema becomes oliguric after vomiting/diarrhoea: what iatrogenic mistake commonly worsens AKI?Aggressive diuretics (when underfilled) \u00b1 ACEi/NSAIDs",
-      "answer": "Aggressive diuretics (when underfilled) \u00b1 ACEi/NSAIDs",
+      "question": "Nephrotic child with oedema becomes oliguric after vomiting/diarrhoea: what iatrogenic mistake commonly worsens AKI?Aggressive diuretics (when underfilled) ± ACEi/NSAIDs",
+      "answer": "Aggressive diuretics (when underfilled) ± ACEi/NSAIDs",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -1972,7 +1972,7 @@
     {
       "id": "9vwizaa7ep",
       "question": "Hypercoagulability in nephrotic syndrome: single best mechanism?",
-      "answer": "Urinary loss of antithrombin III (\u00b1 protein S) + \u2191 procoagulant factors/haemoconcentration",
+      "answer": "Urinary loss of antithrombin III (± protein S) + ↑ procoagulant factors/haemoconcentration",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2114,8 +2114,8 @@
     },
     {
       "id": "scscc50ucn",
-      "question": "A child has haematuria + hypertension + oliguria (\u00b1 oedema). What syndrome pattern is this?",
-      "answer": "Acute nephritic syndrome (glomerular inflammation \u2192 \u2193GFR + haematuria).",
+      "question": "A child has haematuria + hypertension + oliguria (± oedema). What syndrome pattern is this?",
+      "answer": "Acute nephritic syndrome (glomerular inflammation → ↓GFR + haematuria).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2125,8 +2125,8 @@
     },
     {
       "id": "3dmfj3wjj5",
-      "question": "What single urine microscopy finding most strongly localises bleeding to the glomerulus (not lower tract)?RBC casts (\u00b1 dysmorphic RBCs).",
-      "answer": "RBC casts (\u00b1 dysmorphic RBCs).",
+      "question": "What single urine microscopy finding most strongly localises bleeding to the glomerulus (not lower tract)?RBC casts (± dysmorphic RBCs).",
+      "answer": "RBC casts (± dysmorphic RBCs).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2136,8 +2136,8 @@
     },
     {
       "id": "uendzdemb2",
-      "question": "Mechanism link: why do nephritic syndromes cause hypertension and oedema even without heavy proteinuria?\u2193GFR \u2192 Na\u207a/water retention (volume expansion).",
-      "answer": "\u2193GFR \u2192 Na\u207a/water retention (volume expansion).",
+      "question": "Mechanism link: why do nephritic syndromes cause hypertension and oedema even without heavy proteinuria?↓GFR → Na⁺/water retention (volume expansion).",
+      "answer": "↓GFR → Na⁺/water retention (volume expansion).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2147,8 +2147,8 @@
     },
     {
       "id": "ckxpq0notc",
-      "question": "In nephritic syndromes, proteinuria is usually\u2026 (mild/moderate vs nephrotic-range)",
-      "answer": "Mild\u2013moderate (nephrotic-range suggests mixed/nephrotic picture or severe GN).",
+      "question": "In nephritic syndromes, proteinuria is usually… (mild/moderate vs nephrotic-range)",
+      "answer": "Mild–moderate (nephrotic-range suggests mixed/nephrotic picture or severe GN).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2169,7 +2169,7 @@
     },
     {
       "id": "0fv2p31605",
-      "question": "Child with \"cola-coloured urine\" \u2014 what 2 bedside checks are non-negotiable immediately?",
+      "question": "Child with \"cola-coloured urine\" — what 2 bedside checks are non-negotiable immediately?",
       "answer": "Blood pressure + urine dip (blood/protein).",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2257,7 +2257,7 @@
     },
     {
       "id": "btf4am3s65",
-      "question": "Discriminator: IgA nephropathy vs PSGN \u2014 what lab pattern helps most?",
+      "question": "Discriminator: IgA nephropathy vs PSGN — what lab pattern helps most?",
       "answer": "IgA: normal C3; PSGN: low C3.",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2290,8 +2290,8 @@
     },
     {
       "id": "rzjpcga78a",
-      "question": "Nephritic syndrome with rapidly rising creatinine over days\u2013weeks: what pattern is this and why is it urgent?Rapidly progressive GN \u2192 risk of irreversible renal failure; needs urgent nephrology/biopsy.",
-      "answer": "Rapidly progressive GN \u2192 risk of irreversible renal failure; needs urgent nephrology/biopsy.",
+      "question": "Nephritic syndrome with rapidly rising creatinine over days–weeks: what pattern is this and why is it urgent?Rapidly progressive GN → risk of irreversible renal failure; needs urgent nephrology/biopsy.",
+      "answer": "Rapidly progressive GN → risk of irreversible renal failure; needs urgent nephrology/biopsy.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2324,7 +2324,7 @@
     {
       "id": "83tcla9dpq",
       "question": "Anti-GBM disease: first-line treatment principle (one line).",
-      "answer": "High-dose steroids + plasmapheresis (\u00b1 cyclophosphamide/rituximab specialist-led).",
+      "answer": "High-dose steroids + plasmapheresis (± cyclophosphamide/rituximab specialist-led).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2345,7 +2345,7 @@
     },
     {
       "id": "nnq65djdld",
-      "question": "Differential trap: AKI + haematuria + thrombocytopenia + haemolytic anaemia \u2192 what is it (not \"GN\")?",
+      "question": "Differential trap: AKI + haematuria + thrombocytopenia + haemolytic anaemia → what is it (not \"GN\")?",
       "answer": "HUS/TMA.",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2356,7 +2356,7 @@
     },
     {
       "id": "80kn0y25s8",
-      "question": "\"Atypical nephritic syndrome\" \u2014 name 3 biopsy/referral triggers.",
+      "question": "\"Atypical nephritic syndrome\" — name 3 biopsy/referral triggers.",
       "answer": "Persistent low C3, nephrotic-range proteinuria, rising creatinine/systemic features.",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2367,7 +2367,7 @@
     },
     {
       "id": "i5dg6tuxi6",
-      "question": "RBC casts indicate {{c1::glomerular}} haematuria (vs UTI/lower tract).\nIf no casts + dysuria/nitrites \u2192 think UTI.",
+      "question": "RBC casts indicate {{c1::glomerular}} haematuria (vs UTI/lower tract).\nIf no casts + dysuria/nitrites → think UTI.",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephriticSyndromes",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2378,7 +2378,7 @@
     },
     {
       "id": "6p5em9ic2q",
-      "question": "Post-infectious GN is a {{c1::nephritic}} syndrome (haematuria + \u2193GFR + \u2191BP + proteinuria).",
+      "question": "Post-infectious GN is a {{c1::nephritic}} syndrome (haematuria + ↓GFR + ↑BP + proteinuria).",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephriticSyndromes",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2389,7 +2389,7 @@
     },
     {
       "id": "wa5hzuae5u",
-      "question": "Post-strep GN follows pharyngitis or skin infection ({{c1::impetigo}}) by 1\u20133 weeks.",
+      "question": "Post-strep GN follows pharyngitis or skin infection ({{c1::impetigo}}) by 1–3 weeks.",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephriticSyndromes",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2466,7 +2466,7 @@
     },
     {
       "id": "yp3pw3ucy1",
-      "question": "IgA nephropathy: often associated with {{c1::Henoch-Sch\u00f6nlein purpura}} (systemic IgA vasculitis).",
+      "question": "IgA nephropathy: often associated with {{c1::Henoch-Schönlein purpura}} (systemic IgA vasculitis).",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephriticSyndromes",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2477,7 +2477,7 @@
     },
     {
       "id": "t25gw3xows",
-      "question": "IgA nephropathy: treatment depends on severity \u2014 ACEi/ARB if proteinuric; immunosuppression if progressive.",
+      "question": "IgA nephropathy: treatment depends on severity — ACEi/ARB if proteinuric; immunosuppression if progressive.",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::NephriticSyndromes",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2489,7 +2489,7 @@
     {
       "id": "kgrvsfkfvf",
       "question": "When should urine dip not be tested?",
-      "answer": "\u22653 months old with a clear alternative infection source\n\nObvious viral illness with no urinary features",
+      "answer": "≥3 months old with a clear alternative infection source\n\nObvious viral illness with no urinary features",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2511,7 +2511,7 @@
     {
       "id": "9s52hz799g",
       "question": "How to act on dipstick 3 month - 3 years",
-      "answer": "Dipstick     ActionLE\u2212 & Nitrite\u2212     No antibiotics, no culture (unless other criteria)LE+ OR Nitrite+     Send culture + start antibiotics",
+      "answer": "Dipstick     ActionLE− & Nitrite−     No antibiotics, no culture (unless other criteria)LE+ OR Nitrite+     Send culture + start antibiotics",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2522,7 +2522,7 @@
     {
       "id": "jbk58cshkc",
       "question": "How to act on dipstick results >=3 years",
-      "answer": "Dipstick     ActionLE+ & Nitrite+     Treat as UTI. Culture if high risk or previous UTILE\u2212 & Nitrite+     Treat if fresh sample + send cultureLE+ & Nitrite\u2212     Send microscopy/culture. Only treat if strong clinical suspicionLE\u2212 & Nitrite\u2212     UTI unlikely\n\nKey exam principle:\n\nNitrites = more specific\n\nLE alone can be false positive\n\nClinical judgement overrides dipstick if discordant",
+      "answer": "Dipstick     ActionLE+ & Nitrite+     Treat as UTI. Culture if high risk or previous UTILE− & Nitrite+     Treat if fresh sample + send cultureLE+ & Nitrite−     Send microscopy/culture. Only treat if strong clinical suspicionLE− & Nitrite−     UTI unlikely\n\nKey exam principle:\n\nNitrites = more specific\n\nLE alone can be false positive\n\nClinical judgement overrides dipstick if discordant",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2588,7 +2588,7 @@
     {
       "id": "qqu5nzzcjc",
       "question": "What is the definition of recurrent UTI?",
-      "answer": "\u22652 upper UTIs\n\nOR\n\n1 upper + \u22651 lower\n\nOR\n\n\u22653 lower UTIs",
+      "answer": "≥2 upper UTIs\n\nOR\n\n1 upper + ≥1 lower\n\nOR\n\n≥3 lower UTIs",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2698,7 +2698,7 @@
     {
       "id": "llj762z81w",
       "question": "What is renal tubular acidosis (RTA) in one sentence?",
-      "answer": "RTA = normal (or near-normal) GFR with a metabolic acidosis due to impaired renal acid handling (failure to reabsorb HCO\u2083\u207b and/or excrete H\u207a \u2192 reduced net acid excretion), typically causing a normal anion gap (hyperchloremic) metabolic acidosis.",
+      "answer": "RTA = normal (or near-normal) GFR with a metabolic acidosis due to impaired renal acid handling (failure to reabsorb HCO₃⁻ and/or excrete H⁺ → reduced net acid excretion), typically causing a normal anion gap (hyperchloremic) metabolic acidosis.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2708,7 +2708,7 @@
     },
     {
       "id": "ry59li4yb2",
-      "question": "What acid\u2013base pattern should make you think of RTA or diarrhoea first?",
+      "question": "What acid–base pattern should make you think of RTA or diarrhoea first?",
       "answer": "RCPCH::TAS RCPCH::Renal Topic::UTI",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2720,7 +2720,7 @@
     {
       "id": "nusqj0p8m8",
       "question": "How do you calculate the anion gap, and what's \"normal\"?",
-      "answer": "AG = Na\u207a \u2212 (Cl\u207b + HCO\u2083\u207b). \"Normal\" is lab-dependent, often ~8\u201312 mmol/L (without K\u207a). RTA usually has a normal AG.",
+      "answer": "AG = Na⁺ − (Cl⁻ + HCO₃⁻). \"Normal\" is lab-dependent, often ~8–12 mmol/L (without K⁺). RTA usually has a normal AG.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2742,7 +2742,7 @@
     {
       "id": "5yad5meazz",
       "question": "Pitfall: When is the urine anion gap unreliable?",
-      "answer": "When urine has lots of other unmeasured anions/cations or weird composition\u2014e.g. ketonuria, high urinary bicarbonate, toluene, some poisonings, and sometimes in very dilute urine. In real exams: treat UAG as helpful, not holy scripture.",
+      "answer": "When urine has lots of other unmeasured anions/cations or weird composition—e.g. ketonuria, high urinary bicarbonate, toluene, some poisonings, and sometimes in very dilute urine. In real exams: treat UAG as helpful, not holy scripture.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2753,7 +2753,7 @@
     {
       "id": "393wxtk1vv",
       "question": "What are the 3 exam-useful discriminators to classify RTA types quickly?",
-      "answer": "(1) Serum K\u207a (low vs high), (2) Urine pH (can you acidify?), (3) Typical associations.\nDistal (Type 1): often low K\u207a, urine pH > 5.5, stones\nProximal (Type 2): often low K\u207a, urine pH variable (can become <5.5 later), Fanconi features\nType 4: high K\u207a, urine pH often <5.5, hypoaldosterone/resistance",
+      "answer": "(1) Serum K⁺ (low vs high), (2) Urine pH (can you acidify?), (3) Typical associations.\nDistal (Type 1): often low K⁺, urine pH > 5.5, stones\nProximal (Type 2): often low K⁺, urine pH variable (can become <5.5 later), Fanconi features\nType 4: high K⁺, urine pH often <5.5, hypoaldosterone/resistance",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2764,7 +2764,7 @@
     {
       "id": "b1ghluqr0t",
       "question": "What is Type 1 (distal) RTA mechanism, in one line?",
-      "answer": "Alpha-intercalated cells can't secrete H\u207a (or can't generate a steep H\u207a gradient) \u2192 can't acidify urine, impaired NH\u2084\u207a excretion \u2192 metabolic acidosis.",
+      "answer": "Alpha-intercalated cells can't secrete H⁺ (or can't generate a steep H⁺ gradient) → can't acidify urine, impaired NH₄⁺ excretion → metabolic acidosis.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2775,7 +2775,7 @@
     {
       "id": "h7fowtae67",
       "question": "Classic lab pattern for Type 1 (distal) RTA?",
-      "answer": "Normal AG metabolic acidosis + hypokalaemia + urine pH persistently > 5.5 (inappropriately alkaline despite systemic acidosis). Often positive UAG (low NH\u2084\u207a).",
+      "answer": "Normal AG metabolic acidosis + hypokalaemia + urine pH persistently > 5.5 (inappropriately alkaline despite systemic acidosis). Often positive UAG (low NH₄⁺).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2797,7 +2797,7 @@
     {
       "id": "no51v9eyjc",
       "question": "Key causes/associations of Type 1 (distal) RTA you should remember?",
-      "answer": "Autoimmune: Sj\u00f6gren, SLE (older children/teens)\nDrugs/toxins: amphotericin B (classic), analgesic nephropathy (less paeds)\nTubulointerstitial disease, obstructive uropathy, some inherited forms",
+      "answer": "Autoimmune: Sjögren, SLE (older children/teens)\nDrugs/toxins: amphotericin B (classic), analgesic nephropathy (less paeds)\nTubulointerstitial disease, obstructive uropathy, some inherited forms",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2808,7 +2808,7 @@
     {
       "id": "srrt72t5k0",
       "question": "First-line management principle for Type 1 (distal) RTA?",
-      "answer": "Alkali replacement (often potassium citrate or bicarbonate) to correct acidosis and reduce stones; monitor K\u207a, growth, and nephrocalcinosis risk.",
+      "answer": "Alkali replacement (often potassium citrate or bicarbonate) to correct acidosis and reduce stones; monitor K⁺, growth, and nephrocalcinosis risk.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2819,7 +2819,7 @@
     {
       "id": "uksucv7n6h",
       "question": "What is Type 2 (proximal) RTA mechanism, in one line?",
-      "answer": "Proximal tubule can't reabsorb filtered HCO\u2083\u207b effectively \u2192 bicarbonate wasting until serum HCO\u2083\u207b falls to a new lower steady state.",
+      "answer": "Proximal tubule can't reabsorb filtered HCO₃⁻ effectively → bicarbonate wasting until serum HCO₃⁻ falls to a new lower steady state.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2829,8 +2829,8 @@
     },
     {
       "id": "ly41hfornf",
-      "question": "Classic lab pattern for Type 2 (proximal) RTA\u2014especially the urine pH nuance?",
-      "answer": "Normal AG metabolic acidosis + usually hypokalaemia.\nUrine pH is variable:\nEarly/high HCO\u2083\u207b: urine pH > 5.5 (bicarb spilling)\nAfter HCO\u2083\u207b depleted: distal nephron can still acidify \u2192 urine pH < 5.5\nPitfall: urine pH alone can mislead.",
+      "question": "Classic lab pattern for Type 2 (proximal) RTA—especially the urine pH nuance?",
+      "answer": "Normal AG metabolic acidosis + usually hypokalaemia.\nUrine pH is variable:\nEarly/high HCO₃⁻: urine pH > 5.5 (bicarb spilling)\nAfter HCO₃⁻ depleted: distal nephron can still acidify → urine pH < 5.5\nPitfall: urine pH alone can mislead.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2863,7 +2863,7 @@
     {
       "id": "44ywvb5rf5",
       "question": "Management principle for Type 2 (proximal) RTA (and why it's annoying)?",
-      "answer": "Needs larger alkali doses than distal RTA because you keep wasting bicarbonate; may need thiazide (mild volume contraction \u2191 proximal HCO\u2083\u207b reabsorption). Watch K\u207a (often falls with alkali therapy).",
+      "answer": "Needs larger alkali doses than distal RTA because you keep wasting bicarbonate; may need thiazide (mild volume contraction ↑ proximal HCO₃⁻ reabsorption). Watch K⁺ (often falls with alkali therapy).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2874,7 +2874,7 @@
     {
       "id": "x3u0f04hzc",
       "question": "What is Type 4 RTA mechanism, in one sentence?",
-      "answer": "Hypoaldosteronism or aldosterone resistance \u2192 reduced distal Na\u207a reabsorption and impaired K\u207a/H\u207a secretion \u2192 hyperkalaemic normal AG metabolic acidosis (low NH\u2084\u207a generation/excretion).",
+      "answer": "Hypoaldosteronism or aldosterone resistance → reduced distal Na⁺ reabsorption and impaired K⁺/H⁺ secretion → hyperkalaemic normal AG metabolic acidosis (low NH₄⁺ generation/excretion).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2885,7 +2885,7 @@
     {
       "id": "fo0nnl7dgm",
       "question": "Classic lab pattern for Type 4 RTA, and the urine pH clue?",
-      "answer": "Normal AG metabolic acidosis + hyperkalaemia.\nUrine pH is often < 5.5 (distal acidification machinery intact), but NH\u2084\u207a excretion is low \u2192 UAG tends to be positive/less negative.",
+      "answer": "Normal AG metabolic acidosis + hyperkalaemia.\nUrine pH is often < 5.5 (distal acidification machinery intact), but NH₄⁺ excretion is low → UAG tends to be positive/less negative.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2906,7 +2906,7 @@
     },
     {
       "id": "mbg091qmk5",
-      "question": "Fast \"exam triage\": child with metabolic acidosis + rickets/growth failure\u2014what two RTA patterns should you split, and how?",
+      "question": "Fast \"exam triage\": child with metabolic acidosis + rickets/growth failure—what two RTA patterns should you split, and how?",
       "answer": "If hypokalaemia + Fanconi clues (glycosuria with normal glucose, low phosphate): Type 2 (proximal) RTA/Fanconi\nIf hypokalaemia + stones/nephrocalcinosis + urine pH > 5.5: Type 1 (distal) RTA",
       "tag": "Nephro-urology",
       "reps": 0,
@@ -2917,8 +2917,8 @@
     },
     {
       "id": "qkmhz3vxpr",
-      "question": "What is the core pathophysiology of IgA vasculitis (Henoch\u2013Sch\u00f6nlein purpura) in children?",
-      "answer": "IgA-containing immune complexes deposit in small vessels (skin/GI/joints) and renal mesangium \u2192 small-vessel vasculitis (vessel-wall inflammation) \u2192 palpable purpura + systemic features; renal involvement resembles IgA nephropathy.",
+      "question": "What is the core pathophysiology of IgA vasculitis (Henoch–Schönlein purpura) in children?",
+      "answer": "IgA-containing immune complexes deposit in small vessels (skin/GI/joints) and renal mesangium → small-vessel vasculitis (vessel-wall inflammation) → palpable purpura + systemic features; renal involvement resembles IgA nephropathy.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2940,7 +2940,7 @@
     {
       "id": "nwkohr9udy",
       "question": "What 4 organ systems are classically involved in HSP, and what are the typical features?",
-      "answer": "Skin: palpable purpura (legs/buttocks). Joints: arthralgia/arthritis (ankles/knees). GI: colicky abdominal pain \u00b1 GI bleed. Kidney: haematuria \u00b1 proteinuria \u00b1 hypertension.",
+      "answer": "Skin: palpable purpura (legs/buttocks). Joints: arthralgia/arthritis (ankles/knees). GI: colicky abdominal pain ± GI bleed. Kidney: haematuria ± proteinuria ± hypertension.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2951,7 +2951,7 @@
     {
       "id": "6jbl1bnl01",
       "question": "What is an exam-usable set of diagnostic criteria for HSP?",
-      "answer": "Mandatory: palpable purpura/petechiae (often lower limbs) not explained by thrombocytopenia. Plus \u22651 of: abdominal pain, arthritis/arthralgia, renal involvement (haematuria/proteinuria), or biopsy showing IgA deposition.",
+      "answer": "Mandatory: palpable purpura/petechiae (often lower limbs) not explained by thrombocytopenia. Plus ≥1 of: abdominal pain, arthritis/arthralgia, renal involvement (haematuria/proteinuria), or biopsy showing IgA deposition.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -2984,7 +2984,7 @@
     {
       "id": "zyse6icpgi",
       "question": "List the key baseline investigations for suspected HSP and why they matter.",
-      "answer": "Urine dip/UPCR (renal involvement), BP (renal risk), U&E/creatinine (renal function), FBC/platelets (exclude ITP/sepsis patterns), \u00b1 CRP if unwell; consider coag if bleeding disorder/DIC concern.",
+      "answer": "Urine dip/UPCR (renal involvement), BP (renal risk), U&E/creatinine (renal function), FBC/platelets (exclude ITP/sepsis patterns), ± CRP if unwell; consider coag if bleeding disorder/DIC concern.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -3160,7 +3160,7 @@
     {
       "id": "qhlwpxlo92",
       "question": "What is the normal descent of the testes?",
-      "answer": "Intra-abdominal \u2192 inguinal canal \u2192 scrotum (completed by birth).",
+      "answer": "Intra-abdominal → inguinal canal → scrotum (completed by birth).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -3358,7 +3358,7 @@
     {
       "id": "cgsx26y7h9",
       "question": "The hepatic diverticulum splits into anterior and posterior parts. What does each become ?",
-      "answer": "Anterior \u2192 liver parenchyma + intrahepatic biliary tree. \nPosterior \u2192 gallbladder + extrahepatic bile ducts. \n(Useful when thinking about congenital extrahepatic vs intrahepatic biliary problems.)",
+      "answer": "Anterior → liver parenchyma + intrahepatic biliary tree. \nPosterior → gallbladder + extrahepatic bile ducts. \n(Useful when thinking about congenital extrahepatic vs intrahepatic biliary problems.)",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3413,7 +3413,7 @@
     {
       "id": "hwxipvhooh",
       "question": "\"Ductal plate remodelling\" (overbuild then selective regression/expansion of bile duct precursors) goes wrong. What disease category does this produce and what's the typical physiological consequence?",
-      "answer": "Ductal plate malformations (fibropolycystic liver diseases). Physiological consequence often: abnormal ducts + fibrosis \u2192 portal hypertension \u00b1 cholangitis (depends on phenotype).",
+      "answer": "Ductal plate malformations (fibropolycystic liver diseases). Physiological consequence often: abnormal ducts + fibrosis → portal hypertension ± cholangitis (depends on phenotype).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3479,7 +3479,7 @@
     {
       "id": "tgyckw9rl4",
       "question": "A sick infant with liver dysfunction becomes drowsy after a standard sedative dose. Which liver function explains this?",
-      "answer": "Impaired drug degradation/detoxification \u2192 prolonged drug effect (e.g., sedation) in liver dysfunction.",
+      "answer": "Impaired drug degradation/detoxification → prolonged drug effect (e.g., sedation) in liver dysfunction.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3490,7 +3490,7 @@
     {
       "id": "8wontpllhw",
       "question": "What lab/clinical pattern represents failure of hepatic glucose homeostasis, and when does it show itself?",
-      "answer": "Fasting hypoglycaemia (loss of glucose homeostasis) \u2192 lethargy/seizures, especially during illness/fasting; common in liver dysfunction.",
+      "answer": "Fasting hypoglycaemia (loss of glucose homeostasis) → lethargy/seizures, especially during illness/fasting; common in liver dysfunction.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3644,7 +3644,7 @@
     {
       "id": "p36yne2ai7",
       "question": "What are the 3 key stages of drug metabolism by the liver?",
-      "answer": "1. CYP450 - Make it reactive (Adds a functional group e.g. -OH -NH2 -SH\n2. Conjugation - Make it water soluble \n* Glucuronidation (UGT enzymes - bilirubin)\n\nSulfation\n\nGlutathione conjugation (GSH transferases) \u2013 key for electrophilic toxins like NAPQI\n\nAcetylation, methylation\n3. Get it out via canaliculi or renal \n\n*note - step 1 can produce toxic metabolites e..g NAPQI in paracetamol overdose",
+      "answer": "1. CYP450 - Make it reactive (Adds a functional group e.g. -OH -NH2 -SH\n2. Conjugation - Make it water soluble \n* Glucuronidation (UGT enzymes - bilirubin)\n\nSulfation\n\nGlutathione conjugation (GSH transferases) – key for electrophilic toxins like NAPQI\n\nAcetylation, methylation\n3. Get it out via canaliculi or renal \n\n*note - step 1 can produce toxic metabolites e..g NAPQI in paracetamol overdose",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3655,7 +3655,7 @@
     {
       "id": "173f7wxof8",
       "question": "A teenager overdoses on paracetamol. Explain the key pathophysiology linking CYP450 to hepatocyte necrosis, and name the critical protective molecule.",
-      "answer": "A fraction of paracetamol is oxidised by CYP2E1 to NAPQI (reactive). \nNormally NAPQI is detoxified by glutathione (GSH). \nOverdose \u2192 GSH depleted \u2192 NAPQI binds hepatocyte proteins \u2192 oxidative/mitochondrial injury \u2192 centrilobular necrosis, very high ALT/AST and rising INR.",
+      "answer": "A fraction of paracetamol is oxidised by CYP2E1 to NAPQI (reactive). \nNormally NAPQI is detoxified by glutathione (GSH). \nOverdose → GSH depleted → NAPQI binds hepatocyte proteins → oxidative/mitochondrial injury → centrilobular necrosis, very high ALT/AST and rising INR.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3665,8 +3665,8 @@
     },
     {
       "id": "aqthyx63nl",
-      "question": "A 2-day-old has vomiting and lethargy; ammonia is very high, ALT/AST are normal, there\u2019s no major metabolic acidosis. What physiology-based diagnosis pattern is this, and why do LFTs stay normal early?",
-      "answer": "Primary urea cycle defect (e.g., OTC/CPS1 pathway). The problem is enzyme capacity for ammonia \u2192 urea, not hepatocyte membrane damage, so ALT/AST can be normal early despite life-threatening hyperammonaemic encephalopathy.",
+      "question": "A 2-day-old has vomiting and lethargy; ammonia is very high, ALT/AST are normal, there’s no major metabolic acidosis. What physiology-based diagnosis pattern is this, and why do LFTs stay normal early?",
+      "answer": "Primary urea cycle defect (e.g., OTC/CPS1 pathway). The problem is enzyme capacity for ammonia → urea, not hepatocyte membrane damage, so ALT/AST can be normal early despite life-threatening hyperammonaemic encephalopathy.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3677,7 +3677,7 @@
     {
       "id": "k5fkgstv08",
       "question": "Q: Why is unconjugated bilirubin potentially neurotoxic in neonates?",
-      "answer": "A: It is lipid soluble and can cross the immature blood\u2013brain barrier if unbound to albumin, depositing in basal ganglia and brainstem nuclei \u2192 kernicterus.",
+      "answer": "A: It is lipid soluble and can cross the immature blood–brain barrier if unbound to albumin, depositing in basal ganglia and brainstem nuclei → kernicterus.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3710,7 +3710,7 @@
     {
       "id": "2uagsc6v3q",
       "question": "Q: What are the key features of physiological neonatal jaundice?",
-      "answer": "A: Appears after 24 hours (day 2\u20133), peaks day 3\u20135 (term), resolves by 10\u201314 days, baby otherwise well.",
+      "answer": "A: Appears after 24 hours (day 2–3), peaks day 3–5 (term), resolves by 10–14 days, baby otherwise well.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3743,7 +3743,7 @@
     {
       "id": "6y3x205ao7",
       "question": "Q: What mechanism explains breast milk jaundice?",
-      "answer": "A: Breast milk contains \u03b2-glucuronidase, which deconjugates bilirubin in the gut \u2192 increased enterohepatic circulation \u2192 raised unconjugated bilirubin.",
+      "answer": "A: Breast milk contains β-glucuronidase, which deconjugates bilirubin in the gut → increased enterohepatic circulation → raised unconjugated bilirubin.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3786,8 +3786,8 @@
     },
     {
       "id": "qmyaejvla4",
-      "question": "Q: How does Crigler\u2013Najjar type I differ from type II?",
-      "answer": "A: Type I: complete absence of UGT \u2192 severe neonatal jaundice, high kernicterus risk.\nType II: partial deficiency, responds to phenobarbital.",
+      "question": "Q: How does Crigler–Najjar type I differ from type II?",
+      "answer": "A: Type I: complete absence of UGT → severe neonatal jaundice, high kernicterus risk.\nType II: partial deficiency, responds to phenobarbital.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3797,7 +3797,7 @@
     },
     {
       "id": "fiyrrhs0ei",
-      "question": "Q: Why does phenobarbital reduce bilirubin in Crigler\u2013Najjar type II?",
+      "question": "Q: Why does phenobarbital reduce bilirubin in Crigler–Najjar type II?",
       "answer": "A: It induces hepatic UGT enzyme activity, increasing conjugation capacity.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
@@ -3820,7 +3820,7 @@
     {
       "id": "5quvgfux7b",
       "question": "Q: How does acidosis increase the risk of kernicterus?",
-      "answer": "A: Acidosis reduces bilirubin binding affinity to albumin \u2192 increases free (unbound) bilirubin.",
+      "answer": "A: Acidosis reduces bilirubin binding affinity to albumin → increases free (unbound) bilirubin.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3886,7 +3886,7 @@
     {
       "id": "fr5g0ufapw",
       "question": "A term baby develops jaundice at 48 hours of life. Feeding well. Weight loss 5%. Hb normal. Reticulocytes normal. DAT negative. Conjugated bilirubin normal.\nWhat is the most likely diagnosis, what are the three physiological drivers, and what is first-line management?",
-      "answer": "Diagnosis: Physiological neonatal jaundice\nMechanisms:\n1. Increased bilirubin production (high neonatal RBC mass + short lifespan)\n2. Immature UGT1A1 activity (reduced conjugation capacity)\n3. Increased enterohepatic circulation (low gut flora + \u03b2-glucuronidase activity)\nManagement:\n\u2022 Plot on age-specific nomogram\n\u2022 Support feeding\n\u2022 Phototherapy if above treatment threshold",
+      "answer": "Diagnosis: Physiological neonatal jaundice\nMechanisms:\n1. Increased bilirubin production (high neonatal RBC mass + short lifespan)\n2. Immature UGT1A1 activity (reduced conjugation capacity)\n3. Increased enterohepatic circulation (low gut flora + β-glucuronidase activity)\nManagement:\n• Plot on age-specific nomogram\n• Support feeding\n• Phototherapy if above treatment threshold",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3897,7 +3897,7 @@
     {
       "id": "rvy7yj3stz",
       "question": "A 12-hour-old term baby is markedly jaundiced. Hb low. Reticulocytes high. DAT positive. Conjugated fraction normal.\nExplain the pathophysiology and why jaundice <24 hours is always pathological.",
-      "answer": "Diagnosis: Immune haemolysis (e.g. Rh/ABO disease)\nMechanism:\nMaternal IgG antibodies cross placenta \u2192 RBC destruction \u2192 massive haem breakdown \u2192 excessive unconjugated bilirubin production.\nWhy early?\nIn utero bilirubin is cleared by placenta.\nIf jaundice appears <24h, production is exceeding neonatal hepatic conjugation immediately \u2192 pathological.\nInvestigations:\nFBC, reticulocytes, blood group, DAT.\nManagement:\nPhototherapy \u00b1 IVIG \u00b1 exchange transfusion.",
+      "answer": "Diagnosis: Immune haemolysis (e.g. Rh/ABO disease)\nMechanism:\nMaternal IgG antibodies cross placenta → RBC destruction → massive haem breakdown → excessive unconjugated bilirubin production.\nWhy early?\nIn utero bilirubin is cleared by placenta.\nIf jaundice appears <24h, production is exceeding neonatal hepatic conjugation immediately → pathological.\nInvestigations:\nFBC, reticulocytes, blood group, DAT.\nManagement:\nPhototherapy ± IVIG ± exchange transfusion.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3908,7 +3908,7 @@
     {
       "id": "ccxviz2zx5",
       "question": "A thriving 3-week-old exclusively breastfed baby has persistent jaundice. Hb normal. Conjugated bilirubin normal.\nWhat is the mechanism and why is this different from breastfeeding jaundice?",
-      "answer": "Diagnosis: Breast milk jaundice\nMechanism:\nBreast milk contains \u03b2-glucuronidase \u2192 deconjugates bilirubin in gut \u2192 increased enterohepatic circulation \u2192 raised unconjugated bilirubin.\nDifference:\nBreastfeeding jaundice = poor intake/dehydration.\nBreast milk jaundice = biochemical recycling despite adequate feeding.\nManagement:\nContinue breastfeeding unless levels extreme.",
+      "answer": "Diagnosis: Breast milk jaundice\nMechanism:\nBreast milk contains β-glucuronidase → deconjugates bilirubin in gut → increased enterohepatic circulation → raised unconjugated bilirubin.\nDifference:\nBreastfeeding jaundice = poor intake/dehydration.\nBreast milk jaundice = biochemical recycling despite adequate feeding.\nManagement:\nContinue breastfeeding unless levels extreme.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3918,8 +3918,8 @@
     },
     {
       "id": "7sccjibqt9",
-      "question": "Day 2 newborn. Total bilirubin 480 \u00b5mol/L. No haemolysis. Sibling died of kernicterus. Does not respond to phenobarbital.\nWhat is the diagnosis, enzyme defect, inheritance, and definitive treatment?",
-      "answer": "Diagnosis: Crigler\u2013Najjar syndrome type I\nMechanism:\nComplete absence of UGT1A1 \u2192 no conjugation of bilirubin \u2192 severe unconjugated hyperbilirubinaemia.\nInheritance:\nAutosomal recessive.\nPhenobarbital ineffective (no enzyme to induce).\nDefinitive treatment:\nLiver transplantation.\nPhototherapy lifelong as bridge.",
+      "question": "Day 2 newborn. Total bilirubin 480 µmol/L. No haemolysis. Sibling died of kernicterus. Does not respond to phenobarbital.\nWhat is the diagnosis, enzyme defect, inheritance, and definitive treatment?",
+      "answer": "Diagnosis: Crigler–Najjar syndrome type I\nMechanism:\nComplete absence of UGT1A1 → no conjugation of bilirubin → severe unconjugated hyperbilirubinaemia.\nInheritance:\nAutosomal recessive.\nPhenobarbital ineffective (no enzyme to induce).\nDefinitive treatment:\nLiver transplantation.\nPhototherapy lifelong as bridge.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3929,8 +3929,8 @@
     },
     {
       "id": "6qpsutgm55",
-      "question": "Two neonates both have bilirubin 380 \u00b5mol/L.\nBaby A: term, albumin normal, pH 7.40.\nBaby B: 30 weeks, albumin low, pH 7.20.\nWhich baby is at higher risk of kernicterus and why is total bilirubin misleading?",
-      "answer": "Higher risk: Baby B\nReason:\nNeurotoxicity depends on free (unbound) bilirubin, not total bilirubin.\nPrematurity:\nImmature BBB (less tight junction integrity)\nReduced UGT capacity\nLow albumin:\nFewer binding sites\nAcidosis:\nReduced albumin binding affinity\nResult:\nHigher free bilirubin fraction \u2192 greater BBB crossing \u2192 kernicterus risk.\nTotal bilirubin does not reflect binding equilibrium.",
+      "question": "Two neonates both have bilirubin 380 µmol/L.\nBaby A: term, albumin normal, pH 7.40.\nBaby B: 30 weeks, albumin low, pH 7.20.\nWhich baby is at higher risk of kernicterus and why is total bilirubin misleading?",
+      "answer": "Higher risk: Baby B\nReason:\nNeurotoxicity depends on free (unbound) bilirubin, not total bilirubin.\nPrematurity:\nImmature BBB (less tight junction integrity)\nReduced UGT capacity\nLow albumin:\nFewer binding sites\nAcidosis:\nReduced albumin binding affinity\nResult:\nHigher free bilirubin fraction → greater BBB crossing → kernicterus risk.\nTotal bilirubin does not reflect binding equilibrium.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3941,7 +3941,7 @@
     {
       "id": "jz5dgegnjo",
       "question": "In a neonate, what defines conjugated hyperbilirubinaemia biochemically?",
-      "answer": "Conjugated bilirubin >20% of total bilirubin or >25 \u03bcmol/L. This indicates impaired bile flow (cholestasis), not increased haem breakdown.",
+      "answer": "Conjugated bilirubin >20% of total bilirubin or >25 μmol/L. This indicates impaired bile flow (cholestasis), not increased haem breakdown.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3952,7 +3952,7 @@
     {
       "id": "vzq2vhjk8v",
       "question": "Why does cholestasis cause dark urine?",
-      "answer": "Conjugated bilirubin is water-soluble. When bile cannot exit via the biliary tree, conjugated bilirubin refluxes into blood and is filtered by the kidneys \u2192 dark urine.",
+      "answer": "Conjugated bilirubin is water-soluble. When bile cannot exit via the biliary tree, conjugated bilirubin refluxes into blood and is filtered by the kidneys → dark urine.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3974,7 +3974,7 @@
     {
       "id": "8ygpi9wf66",
       "question": "What is the key physiological defect in biliary atresia?",
-      "answer": "Progressive obliteration of extrahepatic bile ducts \u2192 complete mechanical obstruction of bile flow \u2192 conjugated hyperbilirubinaemia and rapid progression to biliary cirrhosis.",
+      "answer": "Progressive obliteration of extrahepatic bile ducts → complete mechanical obstruction of bile flow → conjugated hyperbilirubinaemia and rapid progression to biliary cirrhosis.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3985,7 +3985,7 @@
     {
       "id": "n8yho33moe",
       "question": "What clinical pattern should make you urgently suspect biliary atresia in a neonate?",
-      "answer": "Persistent jaundice >14 days (term), pale stools, dark urine, firm hepatomegaly. Requires urgent referral for Kasai before 6\u20138 weeks.",
+      "answer": "Persistent jaundice >14 days (term), pale stools, dark urine, firm hepatomegaly. Requires urgent referral for Kasai before 6–8 weeks.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -3996,7 +3996,7 @@
     {
       "id": "knr2rns1tc",
       "question": "Why is early surgery critical in biliary atresia?",
-      "answer": "Ongoing bile obstruction causes progressive fibrosis; Kasai portoenterostomy before 6\u20138 weeks improves bile drainage and survival.",
+      "answer": "Ongoing bile obstruction causes progressive fibrosis; Kasai portoenterostomy before 6–8 weeks improves bile drainage and survival.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4028,8 +4028,8 @@
     },
     {
       "id": "tyipjym85j",
-      "question": "What is the key serological marker for diagnosing \u03b11-antitrypsin deficiency in a cholestatic infant?",
-      "answer": "Low serum \u03b11-antitrypsin level plus PiZZ genotype. (Liver biopsy shows diastase-resistant globules on PAS staining.)",
+      "question": "What is the key serological marker for diagnosing α1-antitrypsin deficiency in a cholestatic infant?",
+      "answer": "Low serum α1-antitrypsin level plus PiZZ genotype. (Liver biopsy shows diastase-resistant globules on PAS staining.)",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4106,7 +4106,7 @@
     {
       "id": "ji1rpxn6ij",
       "question": "What causes physiological jaundice of the newborn to differ from pathological conjugated jaundice?",
-      "answer": "Physiological jaundice is unconjugated, appears after 24 h, peaks day 3\u20135, resolves by 2 weeks. Conjugated jaundice is always pathological, indicating hepatobiliary disease or obstruction.",
+      "answer": "Physiological jaundice is unconjugated, appears after 24 h, peaks day 3–5, resolves by 2 weeks. Conjugated jaundice is always pathological, indicating hepatobiliary disease or obstruction.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4194,7 +4194,7 @@
     {
       "id": "1toybmbddr",
       "question": "Describe the key features of autoimmune hepatitis including mechanism, lab pattern, and markers.",
-      "answer": "T-cell\u2013mediated immune destruction of hepatocytes.\nHepatocellular pattern with marked ALT elevation.\nRaised IgG.\nAutoantibodies include ANA (Type 1) and anti-LKM (Type 2).\nRisk of cirrhosis if untreated.\nTreatment is steroids.",
+      "answer": "T-cell–mediated immune destruction of hepatocytes.\nHepatocellular pattern with marked ALT elevation.\nRaised IgG.\nAutoantibodies include ANA (Type 1) and anti-LKM (Type 2).\nRisk of cirrhosis if untreated.\nTreatment is steroids.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4315,7 +4315,7 @@
     {
       "id": "f90vwv1laa",
       "question": "Which CYP450 isoenzyme is primarily responsible for generating NAPQI from paracetamol?",
-      "answer": "CYP2E1 \u2014 induced by chronic alcohol and fasting.",
+      "answer": "CYP2E1 — induced by chronic alcohol and fasting.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4326,7 +4326,7 @@
     {
       "id": "mfp6ewdlxr",
       "question": "Why is Zone 3 of the hepatic lobule most vulnerable to paracetamol toxicity?",
-      "answer": "Highest CYP2E1 activity + lowest oxygen supply \u2192 maximal NAPQI generation and oxidative vulnerability.",
+      "answer": "Highest CYP2E1 activity + lowest oxygen supply → maximal NAPQI generation and oxidative vulnerability.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4337,7 +4337,7 @@
     {
       "id": "zpju1fsq5c",
       "question": "What percentage of paracetamol normally undergoes CYP metabolism to NAPQI?",
-      "answer": "Approximately 5\u201310%.",
+      "answer": "Approximately 5–10%.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4359,7 +4359,7 @@
     {
       "id": "6rynegfbdh",
       "question": "Why does chronic alcohol increase risk of paracetamol toxicity?",
-      "answer": "Induces CYP2E1 \u2192 increased NAPQI formation and depletes glutathione stores.",
+      "answer": "Induces CYP2E1 → increased NAPQI formation and depletes glutathione stores.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4392,7 +4392,7 @@
     {
       "id": "vi1t3st7b9",
       "question": "When does ALT typically peak after paracetamol overdose?",
-      "answer": "24\u201372 hours post ingestion.",
+      "answer": "24–72 hours post ingestion.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4458,7 +4458,7 @@
     {
       "id": "2mz7raaklx",
       "question": "How is paracetamol overdose with unknown ingestion time managed?",
-      "answer": "Start NAC \u2014 do not rely solely on the nomogram.",
+      "answer": "Start NAC — do not rely solely on the nomogram.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4491,7 +4491,7 @@
     {
       "id": "dsvz2b1k2m",
       "question": "Why can massive paracetamol overdose cause early hypotension?",
-      "answer": "Mitochondrial failure \u2192 systemic lactic acidosis and vasodilation \u00b1 myocardial depression.",
+      "answer": "Mitochondrial failure → systemic lactic acidosis and vasodilation ± myocardial depression.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4535,7 +4535,7 @@
     {
       "id": "0xvgmwd0l2",
       "question": "A 16-year-old presents 2 hours after ingesting 18 g of paracetamol (single acute ingestion). She is well. A paracetamol level is taken immediately and is low. What is the correct management?",
-      "answer": "Do not use a level taken before 4 hours.\nWait until \u22654 hours post ingestion to measure a reliable level and plot on the nomogram.\nDo not start NAC solely based on a 2-hour level.",
+      "answer": "Do not use a level taken before 4 hours.\nWait until ≥4 hours post ingestion to measure a reliable level and plot on the nomogram.\nDo not start NAC solely based on a 2-hour level.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4590,7 +4590,7 @@
     {
       "id": "j2h0rl44lo",
       "question": "15-year-old took 30 g 4 hours ago. Lactate 8 mmol/L, metabolic acidosis, hypotensive. ALT normal. What is happening and what is management?",
-      "answer": "Early mitochondrial failure \u2192 lactic acidosis before ALT rise.\nStart NAC immediately.\nResuscitate (fluids \u00b1 vasopressors).\nEarly senior review due to risk of acute liver failure.",
+      "answer": "Early mitochondrial failure → lactic acidosis before ALT rise.\nStart NAC immediately.\nResuscitate (fluids ± vasopressors).\nEarly senior review due to risk of acute liver failure.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4623,7 +4623,7 @@
     {
       "id": "qds3b1ap5m",
       "question": "During NAC infusion, the patient develops urticaria and wheeze but remains haemodynamically stable. What is management?",
-      "answer": "Pause NAC temporarily.\nTreat with antihistamine (\u00b1 bronchodilator).\nRestart NAC at slower rate once symptoms resolve.\nDo not abandon NAC unless life-threatening reaction.",
+      "answer": "Pause NAC temporarily.\nTreat with antihistamine (± bronchodilator).\nRestart NAC at slower rate once symptoms resolve.\nDo not abandon NAC unless life-threatening reaction.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4678,7 +4678,7 @@
     {
       "id": "i7wf04zot6",
       "question": "Which autoantibody is associated with Type 2 autoimmune hepatitis and is more common in younger children?",
-      "answer": "Anti-LKM-1 (liver\u2013kidney microsomal antibody).",
+      "answer": "Anti-LKM-1 (liver–kidney microsomal antibody).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4700,7 +4700,7 @@
     {
       "id": "nc04mhjjjb",
       "question": "What is first-line treatment for autoimmune hepatitis in children?",
-      "answer": "Prednisolone (\u00b1 azathioprine).\nImmunosuppression reduces ongoing immune-mediated damage.",
+      "answer": "Prednisolone (± azathioprine).\nImmunosuppression reduces ongoing immune-mediated damage.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4722,7 +4722,7 @@
     {
       "id": "5hqab0gk9g",
       "question": "Which viral hepatitis infections are most associated with chronic liver disease in children?",
-      "answer": "Hepatitis B and Hepatitis C.\nRisk = chronic inflammation \u2192 fibrosis \u2192 cirrhosis \u2192 HCC.",
+      "answer": "Hepatitis B and Hepatitis C.\nRisk = chronic inflammation → fibrosis → cirrhosis → HCC.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4777,7 +4777,7 @@
     {
       "id": "2hraun0nzk",
       "question": "What ophthalmological sign is characteristic of Wilson disease?",
-      "answer": "Kayser\u2013Fleischer rings (copper deposition in Descemet's membrane).",
+      "answer": "Kayser–Fleischer rings (copper deposition in Descemet's membrane).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4788,7 +4788,7 @@
     {
       "id": "ovebpwcsx3",
       "question": "What is the first-line medical treatment for Wilson disease?",
-      "answer": "Copper chelation (penicillamine or trientine) \u00b1 zinc therapy.\nZinc reduces intestinal copper absorption.",
+      "answer": "Copper chelation (penicillamine or trientine) ± zinc therapy.\nZinc reduces intestinal copper absorption.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4832,7 +4832,7 @@
     {
       "id": "1mogck8cj4",
       "question": "Which organelle accumulates mutant protein in alpha-1 antitrypsin deficiency?",
-      "answer": "Endoplasmic reticulum.\nMisfolded A1AT cannot be secreted \u2192 ER stress \u2192 hepatocyte injury.",
+      "answer": "Endoplasmic reticulum.\nMisfolded A1AT cannot be secreted → ER stress → hepatocyte injury.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4854,7 +4854,7 @@
     {
       "id": "jqij4xcdyu",
       "question": "Why does alpha-1 antitrypsin deficiency cause liver disease but lung disease through different mechanisms?",
-      "answer": "Liver: toxic gain-of-function from ER retention of misfolded protein.\nLung: loss-of-function \u2192 reduced elastase inhibition \u2192 emphysema.",
+      "answer": "Liver: toxic gain-of-function from ER retention of misfolded protein.\nLung: loss-of-function → reduced elastase inhibition → emphysema.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4875,7 +4875,7 @@
     },
     {
       "id": "ohwtbxf96b",
-      "question": "What is the primary molecular defect in Wilson\u2019s disease?",
+      "question": "What is the primary molecular defect in Wilson’s disease?",
       "answer": "Mutation in ATP7B causing failure of copper excretion into bile and impaired incorporation into ceruloplasmin.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
@@ -4886,8 +4886,8 @@
     },
     {
       "id": "yerl8m5agz",
-      "question": "What is the gold standard diagnostic test for Wilson\u2019s disease?",
-      "answer": "Liver biopsy with quantitative hepatic copper measurement (>250 \u00b5g/g dry weight).",
+      "question": "What is the gold standard diagnostic test for Wilson’s disease?",
+      "answer": "Liver biopsy with quantitative hepatic copper measurement (>250 µg/g dry weight).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4897,8 +4897,8 @@
     },
     {
       "id": "ff9xs1wo7v",
-      "question": "Which lab pattern in acute liver failure should prompt testing for Wilson\u2019s disease?",
-      "answer": "Low alkaline phosphatase relative to high bilirubin \u00b1 Coombs-negative haemolysis.",
+      "question": "Which lab pattern in acute liver failure should prompt testing for Wilson’s disease?",
+      "answer": "Low alkaline phosphatase relative to high bilirubin ± Coombs-negative haemolysis.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4908,8 +4908,8 @@
     },
     {
       "id": "5plhvcgztj",
-      "question": "What mechanism causes haemolysis in Wilson\u2019s disease?",
-      "answer": "Free copper causes oxidative membrane damage to RBCs \u2192 Coombs-negative intravascular haemolysis.",
+      "question": "What mechanism causes haemolysis in Wilson’s disease?",
+      "answer": "Free copper causes oxidative membrane damage to RBCs → Coombs-negative intravascular haemolysis.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4920,7 +4920,7 @@
     {
       "id": "v8d9rkzs4y",
       "question": "Which hepatic zone is most vulnerable in NAFLD and why?",
-      "answer": "Zone 3 (centrilobular).Highest lipogenesis/CYP450 activity \u2192 prone to oxidative stress and fat accumulation.",
+      "answer": "Zone 3 (centrilobular).Highest lipogenesis/CYP450 activity → prone to oxidative stress and fat accumulation.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4931,7 +4931,7 @@
     {
       "id": "onmq0jdasf",
       "question": "Which histological feature distinguishes NASH from simple steatosis?",
-      "answer": "Hepatocyte ballooning with lobular inflammation.\nFat alone = steatosis. Ballooning = cellular injury \u2192 fibrosis risk.",
+      "answer": "Hepatocyte ballooning with lobular inflammation.\nFat alone = steatosis. Ballooning = cellular injury → fibrosis risk.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4953,7 +4953,7 @@
     {
       "id": "y77ij7x7qg",
       "question": "Define the foregut: boundaries, main arterial supply, parasympathetic + sympathetic supply, and typical referred pain location.",
-      "answer": "Boundaries: Oropharyngeal membrane \u2192 proximal duodenum up to major duodenal papilla (\u00b1 bile duct entry landmark).\nArterial supply: Coeliac trunk (via foregut branches).\nParasympathetic: Vagus nerve (CN X).\nSympathetic: Greater splanchnic (T5\u2013T9) \u2192 coeliac ganglia.\nReferred pain: Epigastric (classically T5\u2013T9).",
+      "answer": "Boundaries: Oropharyngeal membrane → proximal duodenum up to major duodenal papilla (± bile duct entry landmark).\nArterial supply: Coeliac trunk (via foregut branches).\nParasympathetic: Vagus nerve (CN X).\nSympathetic: Greater splanchnic (T5–T9) → coeliac ganglia.\nReferred pain: Epigastric (classically T5–T9).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4964,7 +4964,7 @@
     {
       "id": "fhlpl1l6zk",
       "question": "Define the midgut: boundaries, main arterial supply, parasympathetic + sympathetic supply, and typical referred pain location.",
-      "answer": "Boundaries: Distal duodenum from major papilla \u2192 proximal 2/3 transverse colon.\nArterial supply: SMA.\nParasympathetic: Vagus nerve.\nSympathetic: Lesser splanchnic (T10\u2013T11) \u2192 SMA ganglia.\nReferred pain: Periumbilical (classically T10).",
+      "answer": "Boundaries: Distal duodenum from major papilla → proximal 2/3 transverse colon.\nArterial supply: SMA.\nParasympathetic: Vagus nerve.\nSympathetic: Lesser splanchnic (T10–T11) → SMA ganglia.\nReferred pain: Periumbilical (classically T10).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4975,7 +4975,7 @@
     {
       "id": "utly40sl8b",
       "question": "Define the hindgut: boundaries, main arterial supply, parasympathetic + sympathetic supply, and typical referred pain location.",
-      "answer": "Boundaries: Distal 1/3 transverse colon \u2192 upper anal canal (above pectinate line).\nArterial supply: IMA.\nParasympathetic: Pelvic splanchnics (S2\u2013S4).\nSympathetic: Lumbar splanchnics (L1\u2013L2-ish) \u2192 IMA / hypogastric plexus.\nReferred pain: Suprapubic/hypogastric (often L1\u2013L2 dermatomes).",
+      "answer": "Boundaries: Distal 1/3 transverse colon → upper anal canal (above pectinate line).\nArterial supply: IMA.\nParasympathetic: Pelvic splanchnics (S2–S4).\nSympathetic: Lumbar splanchnics (L1–L2-ish) → IMA / hypogastric plexus.\nReferred pain: Suprapubic/hypogastric (often L1–L2 dermatomes).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -4986,7 +4986,7 @@
     {
       "id": "2v4ndaales",
       "question": "Describe normal midgut rotation: timing, total degrees, direction, and axis.",
-      "answer": "Physiological herniation: ~week 6 (rapid elongation; abdominal cavity too small).\nRotates 90\u00b0 anticlockwise while herniated.\nReturns: ~week 10, rotates additional 180\u00b0 anticlockwise.\nTotal: 270\u00b0 anticlockwise around the SMA.",
+      "answer": "Physiological herniation: ~week 6 (rapid elongation; abdominal cavity too small).\nRotates 90° anticlockwise while herniated.\nReturns: ~week 10, rotates additional 180° anticlockwise.\nTotal: 270° anticlockwise around the SMA.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -4997,7 +4997,7 @@
     {
       "id": "cl2khwhqc6",
       "question": "What is midgut malrotation embryologically, and why does it predispose to volvulus?",
-      "answer": "Failure/incomplete 270\u00b0 anticlockwise rotation + fixation of midgut around SMA (weeks 6\u201310).\nResults in abnormally narrow mesenteric base \u2192 bowel can twist around SMA.\nTwisting \u2192 vascular compromise (venous then arterial) \u2192 rapid bowel ischaemia/necrosis.\nOften associated with Ladd's bands causing duodenal obstruction.",
+      "answer": "Failure/incomplete 270° anticlockwise rotation + fixation of midgut around SMA (weeks 6–10).\nResults in abnormally narrow mesenteric base → bowel can twist around SMA.\nTwisting → vascular compromise (venous then arterial) → rapid bowel ischaemia/necrosis.\nOften associated with Ladd's bands causing duodenal obstruction.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5008,7 +5008,7 @@
     {
       "id": "l0tlg66xsn",
       "question": "3-day-old with bilious vomiting, intermittent screaming, then lethargy; abdomen may be soft early. What diagnosis must you assume until proven otherwise, and why?",
-      "answer": "Midgut malrotation with volvulus until proven otherwise.\nBilious vomiting = obstruction distal to ampulla; volvulus can strangulate SMA supply \u2192 bowel necrosis within hours.",
+      "answer": "Midgut malrotation with volvulus until proven otherwise.\nBilious vomiting = obstruction distal to ampulla; volvulus can strangulate SMA supply → bowel necrosis within hours.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5030,7 +5030,7 @@
     {
       "id": "fvt1q552nb",
       "question": "Emergency management + definitive treatment for suspected midgut volvulus.",
-      "answer": "Immediate: ABC resus, NG decompression, IV fluids, broad-spectrum antibiotics, urgent paeds surgery.\nDefinitive: Ladd procedure (detorsion counter-clockwise, divide Ladd's bands, broaden mesenteric base, position small bowel right/colon left; appendicectomy often done to avoid future diagnostic confusion).\nIf necrotic bowel \u2192 resection \u00b1 stoma, second-look laparotomy depending on viability.",
+      "answer": "Immediate: ABC resus, NG decompression, IV fluids, broad-spectrum antibiotics, urgent paeds surgery.\nDefinitive: Ladd procedure (detorsion counter-clockwise, divide Ladd's bands, broaden mesenteric base, position small bowel right/colon left; appendicectomy often done to avoid future diagnostic confusion).\nIf necrotic bowel → resection ± stoma, second-look laparotomy depending on viability.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5085,7 +5085,7 @@
     {
       "id": "emydnzic9z",
       "question": "Embryological mechanism of duodenal atresia/stenosis and how it differs from jejunoileal atresia.",
-      "answer": "Duodenal atresia/stenosis: failure of recanalisation (temporary solid stage fails to reopen).\nJejunoileal atresia: usually intrauterine vascular accident \u2192 ischaemia/resorption (NOT recanalisation failure).",
+      "answer": "Duodenal atresia/stenosis: failure of recanalisation (temporary solid stage fails to reopen).\nJejunoileal atresia: usually intrauterine vascular accident → ischaemia/resorption (NOT recanalisation failure).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5118,7 +5118,7 @@
     {
       "id": "51og8byirn",
       "question": "Why does duodenal atresia cause polyhydramnios antenatally?",
-      "answer": "Late pregnancy amniotic fluid balance depends on fetal swallowing + GI absorption.\nObstruction prevents normal passage/absorption \u2192 swallowed fluid can't be absorbed effectively \u2192 polyhydramnios.",
+      "answer": "Late pregnancy amniotic fluid balance depends on fetal swallowing + GI absorption.\nObstruction prevents normal passage/absorption → swallowed fluid can't be absorbed effectively → polyhydramnios.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5129,7 +5129,7 @@
     {
       "id": "n65rex4imu",
       "question": "Differentiate omphalocele vs gastroschisis: embryology, covering, position, chromosomal association, malrotation risk.",
-      "answer": "Omphalocele: failure of midgut return (week ~10); covered sac (amnion + peritoneum); midline at umbilical ring; chromosomal anomalies common (T21/T13/T18) + other defects; malrotation can coexist.\nGastroschisis: failure of lateral body wall closure; no sac (bowel exposed to amniotic fluid \u2192 inflamed/thickened); usually right of umbilicus; chromosomal association rare; malrotation can occur but less syndromic context.",
+      "answer": "Omphalocele: failure of midgut return (week ~10); covered sac (amnion + peritoneum); midline at umbilical ring; chromosomal anomalies common (T21/T13/T18) + other defects; malrotation can coexist.\nGastroschisis: failure of lateral body wall closure; no sac (bowel exposed to amniotic fluid → inflamed/thickened); usually right of umbilicus; chromosomal association rare; malrotation can occur but less syndromic context.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5162,7 +5162,7 @@
     {
       "id": "kjfb2deou2",
       "question": "A 2-year-old boy has painless rectal bleeding (maroon), otherwise well. What is the likely diagnosis, what embryological remnant causes it, and the \"rule of 2s\"?",
-      "answer": "Meckel's diverticulum (true diverticulum) due to persistent vitelline/omphalomesenteric duct.\nRule of 2s: ~2% population, 2:1 male, 2 feet from ileocaecal valve, ~2 inches long, often presents <2 years, may contain 2 ectopic tissues (gastric +/- pancreatic).\nBleeding mechanism: ectopic gastric mucosa \u2192 acid \u2192 ulcerates adjacent ileal mucosa \u2192 bleeding.",
+      "answer": "Meckel's diverticulum (true diverticulum) due to persistent vitelline/omphalomesenteric duct.\nRule of 2s: ~2% population, 2:1 male, 2 feet from ileocaecal valve, ~2 inches long, often presents <2 years, may contain 2 ectopic tissues (gastric +/- pancreatic).\nBleeding mechanism: ectopic gastric mucosa → acid → ulcerates adjacent ileal mucosa → bleeding.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5173,7 +5173,7 @@
     {
       "id": "2loy3bhpti",
       "question": "Hirschsprung disease: embryology, what plexuses are absent, and diagnostic histology features.",
-      "answer": "Failure of neural crest cell migration (craniocaudal) \u2192 aganglionosis distally (often rectosigmoid).\nAbsent Auerbach (myenteric) + Meissner (submucosal) plexuses.\nFunctional obstruction: distal segment can't relax (loss of inhibitory neurons) \u2192 tonic contraction, proximal megacolon.\nDiagnosis: rectal suction biopsy: absent ganglion cells + hypertrophic nerve trunks (often \u2191AChE staining).",
+      "answer": "Failure of neural crest cell migration (craniocaudal) → aganglionosis distally (often rectosigmoid).\nAbsent Auerbach (myenteric) + Meissner (submucosal) plexuses.\nFunctional obstruction: distal segment can't relax (loss of inhibitory neurons) → tonic contraction, proximal megacolon.\nDiagnosis: rectal suction biopsy: absent ganglion cells + hypertrophic nerve trunks (often ↑AChE staining).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5206,7 +5206,7 @@
     {
       "id": "5o0fmzb9d2",
       "question": "Embryological basis of anorectal malformations: what divides the cloaca and what goes wrong?",
-      "answer": "Urorectal septum divides cloaca into urogenital sinus (anterior) and anorectal canal (posterior).\nFailure of septum descent/fusion or membrane breakdown \u2192 imperforate anus, fistulas, persistent cloaca.",
+      "answer": "Urorectal septum divides cloaca into urogenital sinus (anterior) and anorectal canal (posterior).\nFailure of septum descent/fusion or membrane breakdown → imperforate anus, fistulas, persistent cloaca.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5294,7 +5294,7 @@
     {
       "id": "w7h25vo0au",
       "question": "Why are Peyer's patches relevant to intussusception pathophysiology?",
-      "answer": "Lymphoid hyperplasia in terminal ileum increases after viral illness \u2192 forms a functional \"lead point\" \u2192 bowel telescopes with peristalsis.",
+      "answer": "Lymphoid hyperplasia in terminal ileum increases after viral illness → forms a functional \"lead point\" → bowel telescopes with peristalsis.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5316,7 +5316,7 @@
     {
       "id": "xk4ob20742",
       "question": "Why does intussusception cause redcurrant jelly stool?",
-      "answer": "Telescoping drags mesentery \u2192 venous congestion first \u2192 bowel wall oedema \u2192 mucosal ischaemia \u2192 bleeding + mucus \u2192 \"redcurrant jelly.\"",
+      "answer": "Telescoping drags mesentery → venous congestion first → bowel wall oedema → mucosal ischaemia → bleeding + mucus → \"redcurrant jelly.\"",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5327,7 +5327,7 @@
     {
       "id": "8sf8n755du",
       "question": "How can intussusception cause shock?",
-      "answer": "Hypovolaemia/third spacing into oedematous bowel, vomiting/dehydration.\nBlood loss into lumen.\nPerforation \u2192 peritonitis \u2192 septic shock (late).",
+      "answer": "Hypovolaemia/third spacing into oedematous bowel, vomiting/dehydration.\nBlood loss into lumen.\nPerforation → peritonitis → septic shock (late).",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5349,7 +5349,7 @@
     {
       "id": "7u8ukzhws7",
       "question": "Chief cells: secretion, activation, and physiological role.",
-      "answer": "Secrete: Pepsinogen\nStimulated by: Vagal stimulation (ACh), acid\nActivated by: Low pH \u2192 pepsin\nFunction: Begins protein digestion",
+      "answer": "Secrete: Pepsinogen\nStimulated by: Vagal stimulation (ACh), acid\nActivated by: Low pH → pepsin\nFunction: Begins protein digestion",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5360,7 +5360,7 @@
     {
       "id": "srxdoqfhqa",
       "question": "G cells: source, stimulus, and actions of gastrin.",
-      "answer": "Location: Antrum\nStimulus: Peptides, distension, vagal GRP\nSecrete: Gastrin\nActions: \u2191 HCl (direct + via ECL histamine), \u2191 motility, trophic mucosal effect\nInhibited by: Somatostatin (low pH)",
+      "answer": "Location: Antrum\nStimulus: Peptides, distension, vagal GRP\nSecrete: Gastrin\nActions: ↑ HCl (direct + via ECL histamine), ↑ motility, trophic mucosal effect\nInhibited by: Somatostatin (low pH)",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5371,7 +5371,7 @@
     {
       "id": "ojxlvaminj",
       "question": "Enterochromaffin-like (ECL) cells: regulation and function.",
-      "answer": "Location: Gastric body\nStimulated by: Gastrin, ACh\nSecrete: Histamine\nHistamine acts on H2 receptors \u2192 \u2191 cAMP \u2192 \u2191 acid secretion",
+      "answer": "Location: Gastric body\nStimulated by: Gastrin, ACh\nSecrete: Histamine\nHistamine acts on H2 receptors → ↑ cAMP → ↑ acid secretion",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5382,7 +5382,7 @@
     {
       "id": "11uqp36w8z",
       "question": "Describe the cephalic phase of gastric secretion.",
-      "answer": "Trigger: Sight, smell, thought of food\nMediated by: Vagus nerve\nEffects: \u2191 ACh \u2192 stimulates parietal, chief, G cells\nContributes ~30% of acid secretion",
+      "answer": "Trigger: Sight, smell, thought of food\nMediated by: Vagus nerve\nEffects: ↑ ACh → stimulates parietal, chief, G cells\nContributes ~30% of acid secretion",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5404,7 +5404,7 @@
     {
       "id": "ottemu5uhv",
       "question": "Describe the intestinal phase of gastric regulation.",
-      "answer": "Trigger: Acid, fat in duodenum\nHormones: Secretin, CCK, GIP\nNet effect: \u2193 gastric acid + \u2193 emptying",
+      "answer": "Trigger: Acid, fat in duodenum\nHormones: Secretin, CCK, GIP\nNet effect: ↓ gastric acid + ↓ emptying",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5415,7 +5415,7 @@
     {
       "id": "m3stlrylsb",
       "question": "Secretin: source, stimulus, and actions.",
-      "answer": "Source: S cells (duodenum)\nStimulus: Acid (pH <4.5)\nActions: \u2191 pancreatic bicarbonate, \u2193 gastric acid, slows emptying",
+      "answer": "Source: S cells (duodenum)\nStimulus: Acid (pH <4.5)\nActions: ↑ pancreatic bicarbonate, ↓ gastric acid, slows emptying",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5426,7 +5426,7 @@
     {
       "id": "c3ua1yoje4",
       "question": "CCK: source, stimulus, and actions.",
-      "answer": "Source: I cells (duodenum)\nStimulus: Fats > proteins\nActions: \u2191 pancreatic enzymes, \u2191 gallbladder contraction, relaxes sphincter of Oddi, slows gastric emptying",
+      "answer": "Source: I cells (duodenum)\nStimulus: Fats > proteins\nActions: ↑ pancreatic enzymes, ↑ gallbladder contraction, relaxes sphincter of Oddi, slows gastric emptying",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5437,7 +5437,7 @@
     {
       "id": "dcqc7w6gch",
       "question": "GLP-1: source and function.",
-      "answer": "Source: L cells (ileum/colon)\nStimulus: Nutrients\nActions: \u2191 insulin, \u2193 glucagon, \u2193 gastric emptying, \u2191 satiety",
+      "answer": "Source: L cells (ileum/colon)\nStimulus: Nutrients\nActions: ↑ insulin, ↓ glucagon, ↓ gastric emptying, ↑ satiety",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5448,7 +5448,7 @@
     {
       "id": "88559db2ib",
       "question": "GIP: source and function.",
-      "answer": "Source: K cells (duodenum)\nStimulus: Glucose, fat\nActions: \u2191 insulin (incretin), \u2193 gastric acid",
+      "answer": "Source: K cells (duodenum)\nStimulus: Glucose, fat\nActions: ↑ insulin (incretin), ↓ gastric acid",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5481,7 +5481,7 @@
     {
       "id": "74smqnx6r0",
       "question": "VIP: source and physiological effect.",
-      "answer": "Source: Enteric neurons\nEffects: Smooth muscle relaxation, \u2191 intestinal secretion\nExcess \u2192 watery diarrhoea (VIPoma)",
+      "answer": "Source: Enteric neurons\nEffects: Smooth muscle relaxation, ↑ intestinal secretion\nExcess → watery diarrhoea (VIPoma)",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5503,7 +5503,7 @@
     {
       "id": "yppwhzm4g2",
       "question": "Explain trypsinogen activation and its clinical relevance.",
-      "answer": "Trypsinogen (acinar) \u2192 activated by enteropeptidase (brush border) \u2192 trypsin\nTrypsin activates other proteases\nPremature activation \u2192 pancreatitis",
+      "answer": "Trypsinogen (acinar) → activated by enteropeptidase (brush border) → trypsin\nTrypsin activates other proteases\nPremature activation → pancreatitis",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5514,7 +5514,7 @@
     {
       "id": "b4yb503jkl",
       "question": "Function and regulation of pancreatic lipase.",
-      "answer": "Breaks triglycerides \u2192 monoglycerides + FFA\nRequires colipase\nStimulated by CCK",
+      "answer": "Breaks triglycerides → monoglycerides + FFA\nRequires colipase\nStimulated by CCK",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5525,7 +5525,7 @@
     {
       "id": "3bz0ym60b5",
       "question": "Role of pancreatic amylase.",
-      "answer": "Breaks starch \u2192 maltose, dextrins\nDoes NOT break \u03b1-1,6 bonds (needs brush border enzymes)",
+      "answer": "Breaks starch → maltose, dextrins\nDoes NOT break α-1,6 bonds (needs brush border enzymes)",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5569,7 +5569,7 @@
     {
       "id": "8l3vpvwvn2",
       "question": "Role of ENS in motility and link to Hirschsprung disease.",
-      "answer": "ENS = Auerbach + Meissner plexuses\nHirschsprung = absence of ganglion cells\nCauses tonic contraction \u2192 functional obstruction",
+      "answer": "ENS = Auerbach + Meissner plexuses\nHirschsprung = absence of ganglion cells\nCauses tonic contraction → functional obstruction",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5580,7 +5580,7 @@
     {
       "id": "2p8gs4tj9o",
       "question": "Name the key disaccharidases and what they break down.",
-      "answer": "Lactase \u2192 lactose\nSucrase \u2192 sucrose\nMaltase \u2192 maltose\nIsomaltase \u2192 \u03b1-1,6 bonds",
+      "answer": "Lactase → lactose\nSucrase → sucrose\nMaltase → maltose\nIsomaltase → α-1,6 bonds",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5591,7 +5591,7 @@
     {
       "id": "hw2bgjtdbf",
       "question": "How are glucose and galactose absorbed?",
-      "answer": "Via SGLT1 (Na\u207a dependent cotransport)\nExit via GLUT2",
+      "answer": "Via SGLT1 (Na⁺ dependent cotransport)\nExit via GLUT2",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5613,7 +5613,7 @@
     {
       "id": "iw7ajdad1j",
       "question": "Why does lactase deficiency cause diarrhoea?",
-      "answer": "Unabsorbed lactose \u2192 osmotic effect \u2192 water retention\nBacterial fermentation \u2192 gas",
+      "answer": "Unabsorbed lactose → osmotic effect → water retention\nBacterial fermentation → gas",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5624,7 +5624,7 @@
     {
       "id": "8v9iv1f60j",
       "question": "Outline protein digestion and absorption.",
-      "answer": "Pepsin (stomach)\nTrypsin cascade (duodenum)\nBrush border peptidases\nAmino acids via Na\u207a transport\nDi/tripeptides via PEPT1",
+      "answer": "Pepsin (stomach)\nTrypsin cascade (duodenum)\nBrush border peptidases\nAmino acids via Na⁺ transport\nDi/tripeptides via PEPT1",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5635,7 +5635,7 @@
     {
       "id": "laj9nemy93",
       "question": "Outline fat digestion and absorption.",
-      "answer": "CCK \u2192 bile + lipase\nEmulsification\nLipase \u2192 monoglycerides + FFA\nMicelles\nRe-esterified \u2192 chylomicrons \u2192 lymph",
+      "answer": "CCK → bile + lipase\nEmulsification\nLipase → monoglycerides + FFA\nMicelles\nRe-esterified → chylomicrons → lymph",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5646,7 +5646,7 @@
     {
       "id": "r90qs48e44",
       "question": "How is sodium absorbed in the intestine?",
-      "answer": "Driven by Na\u207a/K\u207a ATPase (basolateral)\nCoupled with glucose (SGLT1)\nBasis of oral rehydration therapy",
+      "answer": "Driven by Na⁺/K⁺ ATPase (basolateral)\nCoupled with glucose (SGLT1)\nBasis of oral rehydration therapy",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5657,7 +5657,7 @@
     {
       "id": "oz8nub3dnz",
       "question": "Mechanism of secretory diarrhoea (e.g., cholera).",
-      "answer": "\u2191 cAMP \u2192 CFTR activation \u2192 Cl\u207b secretion\nNa\u207a + water follow\nORS works because SGLT1 remains functional",
+      "answer": "↑ cAMP → CFTR activation → Cl⁻ secretion\nNa⁺ + water follow\nORS works because SGLT1 remains functional",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5668,7 +5668,7 @@
     {
       "id": "qtjs7cfdhx",
       "question": "Site and mechanism of iron absorption.",
-      "answer": "Site: Duodenum\nFe\u00b2\u207a via DMT1 transporter",
+      "answer": "Site: Duodenum\nFe²⁺ via DMT1 transporter",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5745,7 +5745,7 @@
     {
       "id": "x45nty9hrw",
       "question": "Describe the underlying mechanisms of GOR and GORD.",
-      "answer": "GOR: Immature lower oesophageal sphincter (LES), short oesophagus, supine posture, liquid feeds.\nGORD: Pathological reflux with mucosal inflammation due to repeated acid exposure \u00b1 delayed gastric emptying or neurological impairment.",
+      "answer": "GOR: Immature lower oesophageal sphincter (LES), short oesophagus, supine posture, liquid feeds.\nGORD: Pathological reflux with mucosal inflammation due to repeated acid exposure ± delayed gastric emptying or neurological impairment.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5756,7 +5756,7 @@
     {
       "id": "fet5sfr7lb",
       "question": "What is the epidemiology of GOR in infants?",
-      "answer": "Common in infants (<6 months).\nPeaks around 3\u20134 months.\nMajority resolve spontaneously by 12\u201318 months.",
+      "answer": "Common in infants (<6 months).\nPeaks around 3–4 months.\nMajority resolve spontaneously by 12–18 months.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5800,7 +5800,7 @@
     {
       "id": "jaxp7135ip",
       "question": "When should a trial of extensively hydrolysed formula (EHF) be considered in an infant with reflux symptoms?",
-      "answer": "If reflux symptoms coexist with possible CMPA features (eczema, blood in stool, persistent distress, family atopy), trial EHF for 2\u20134 weeks before acid suppression.",
+      "answer": "If reflux symptoms coexist with possible CMPA features (eczema, blood in stool, persistent distress, family atopy), trial EHF for 2–4 weeks before acid suppression.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5811,7 +5811,7 @@
     {
       "id": "a7cek95qdg",
       "question": "When does pyloric stenosis typically present and in whom?",
-      "answer": "2\u20138 weeks old\nMore common in first-born males\nAssociated with macrolide exposure (e.g., erythromycin)",
+      "answer": "2–8 weeks old\nMore common in first-born males\nAssociated with macrolide exposure (e.g., erythromycin)",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5833,7 +5833,7 @@
     {
       "id": "uyyyi5cr5s",
       "question": "What biochemical abnormality occurs in pyloric stenosis and why?",
-      "answer": "Hypochloraemic, hypokalaemic metabolic alkalosis due to loss of gastric HCl and volume depletion activating RAAS \u2192 renal K\u207a loss.",
+      "answer": "Hypochloraemic, hypokalaemic metabolic alkalosis due to loss of gastric HCl and volume depletion activating RAAS → renal K⁺ loss.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5844,7 +5844,7 @@
     {
       "id": "sa3k1bitua",
       "question": "Describe the pathophysiology of pyloric stenosis.",
-      "answer": "Hypertrophy of pyloric muscle \u2192 gastric outlet obstruction \u2192 repeated vomiting \u2192 dehydration and electrolyte disturbance.",
+      "answer": "Hypertrophy of pyloric muscle → gastric outlet obstruction → repeated vomiting → dehydration and electrolyte disturbance.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5888,7 +5888,7 @@
     {
       "id": "7ac7g5dq5t",
       "question": "What is the gold standard for diagnosing H. pylori in children?",
-      "answer": "Endoscopy with biopsies (histology \u00b1 culture/sensitivity).",
+      "answer": "Endoscopy with biopsies (histology ± culture/sensitivity).",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5899,7 +5899,7 @@
     {
       "id": "zqqy083k9y",
       "question": "What is the principle of H. pylori triple therapy in children?",
-      "answer": "PPI + two antibiotics (guided by susceptibility) for 10\u201314 days; confirm eradication.",
+      "answer": "PPI + two antibiotics (guided by susceptibility) for 10–14 days; confirm eradication.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -5921,7 +5921,7 @@
     {
       "id": "ymz3ofygdf",
       "question": "Define eosinophilic oesophagitis (EoE).",
-      "answer": "Chronic immune-mediated oesophageal disease with symptoms of oesophageal dysfunction and \u226515 eosinophils/hpf on biopsy.",
+      "answer": "Chronic immune-mediated oesophageal disease with symptoms of oesophageal dysfunction and ≥15 eosinophils/hpf on biopsy.",
       "tag": "Gastroenterology and hepatology",
       "reps": 0,
       "interval": 1,
@@ -5943,7 +5943,7 @@
     {
       "id": "baj8crpw6y",
       "question": "What histological threshold confirms EoE?",
-      "answer": "\u226515 eosinophils per high power field.",
+      "answer": "≥15 eosinophils per high power field.",
       "tag": "Nephro-urology",
       "reps": 0,
       "interval": 1,
@@ -6007,5 +6007,11 @@
       "lastReviewed": null
     }
   ],
-  "stats": {}
+  "stats": {
+    "Nephro-urology": {
+      "reviews": 1,
+      "good": 1,
+      "again": 0
+    }
+  }
 }

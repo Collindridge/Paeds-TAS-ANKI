@@ -27,11 +27,11 @@
       "question": "Describe the molecular failure in Minimal Change Disease (MCD).",
       "answer": "T-cell mediated cytokine release --> effacement of podocytes and loss of the polyionic negative charge barrier",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20512,
+      "lastReviewed": 1772206196238
     },
     {
       "id": "0h5z11svz5",
@@ -6009,8 +6009,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 2,
-      "good": 2,
+      "reviews": 3,
+      "good": 3,
       "again": 0
     }
   }

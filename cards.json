@@ -16,11 +16,11 @@
       "question": "which force determines glomeular filtration?",
       "answer": "starlings force",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20512,
+      "lastReviewed": 1772206190375
     },
     {
       "id": "z9ne7rto74",
@@ -6009,8 +6009,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 1,
-      "good": 1,
+      "reviews": 2,
+      "good": 2,
       "again": 0
     }
   }

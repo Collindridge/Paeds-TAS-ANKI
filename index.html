@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paeds Flashcards</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface2: #1c2128; --surface3: #222933;
+    --border: #2a3140; --border2: #374151;
+    --text: #e6edf3; --text2: #8b949e; --text3: #58677a;
+    --accent: #39d4a5; --accent2: #2ebd91; --accent-dim: rgba(57,212,165,0.12);
+    --red: #f85149; --orange: #d29922; --blue: #58a6ff; --green: #3fb950;
+    --radius: 12px; --radius-sm: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Instrument Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+
+  /* ── HEADER ── */
+  header { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; background: var(--surface); position: sticky; top: 0; z-index: 100; gap: 12px; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--accent); letter-spacing: -0.02em; flex-shrink: 0; }
+  .logo span { color: var(--text2); font-style: italic; font-size: 0.85rem; margin-left: 6px; }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+
+  /* Sync pill */
+  .sync-pill {
+    display: flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 20px;
+    font-size: 0.75rem; font-family: 'DM Mono', monospace;
+    border: 1px solid var(--border); color: var(--text3);
+    background: var(--surface2); cursor: default; white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .sync-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--text3); flex-shrink: 0; }
+  .sync-pill.synced   { border-color: rgba(57,212,165,0.4); color: var(--accent);  } .sync-pill.synced .dot  { background: var(--accent); }
+  .sync-pill.syncing  { border-color: rgba(88,166,255,0.4); color: var(--blue);   } .sync-pill.syncing .dot  { background: var(--blue); animation: pulse 1s infinite; }
+  .sync-pill.offline  { border-color: rgba(210,153,34,0.4); color: var(--orange); } .sync-pill.offline .dot  { background: var(--orange); }
+  .sync-pill.error    { border-color: rgba(248,81,73,0.4);  color: var(--red);    } .sync-pill.error .dot    { background: var(--red); }
+  .sync-pill.nosync   { cursor: pointer; }
+  .sync-pill.nosync:hover { border-color: var(--accent); color: var(--accent); }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  /* ── BUTTONS ── */
+  .btn { padding: 7px 14px; border-radius: var(--radius-sm); border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 0.875rem; font-weight: 500; transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px; }
+  .btn-ghost  { background: transparent; color: var(--text2); border: 1px solid var(--border); }
+  .btn-ghost:hover  { background: var(--surface2); color: var(--text); border-color: var(--border2); }
+  .btn-accent { background: var(--accent); color: #0d1117; font-weight: 600; }
+  .btn-accent:hover { background: var(--accent2); transform: translateY(-1px); }
+  .btn-surface{ background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .btn-surface:hover{ background: var(--surface3); border-color: var(--border2); }
+  .btn-danger { background: rgba(248,81,73,0.12); color: var(--red); border: 1px solid rgba(248,81,73,0.3); }
+  .btn-danger:hover { background: rgba(248,81,73,0.25); }
+  .btn-sm { padding: 5px 10px; font-size: 0.8rem; }
+  .btn-lg { padding: 12px 24px; font-size: 0.95rem; }
+
+  /* ── NAV ── */
+  .nav-tabs { display: flex; gap: 4px; padding: 14px 24px 0; border-bottom: 1px solid var(--border); background: var(--surface); overflow-x: auto; }
+  .nav-tab { padding: 9px 16px; border-radius: var(--radius-sm) var(--radius-sm) 0 0; cursor: pointer; font-size: 0.875rem; font-weight: 500; color: var(--text2); border: 1px solid transparent; border-bottom: none; transition: all 0.15s; background: transparent; font-family: 'Instrument Sans', sans-serif; margin-bottom: -1px; white-space: nowrap; }
+  .nav-tab:hover  { color: var(--text); background: var(--surface2); }
+  .nav-tab.active { color: var(--accent); background: var(--bg); border-color: var(--border); }
+
+  /* ── MAIN ── */
+  .main { flex: 1; padding: 24px; max-width: 960px; width: 100%; margin: 0 auto; }
+  .view { display: none; }
+  .view.active { display: block; animation: fadeIn 0.2s ease; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+
+  /* ── LOADING SCREEN ── */
+  #loading-screen {
+    position: fixed; inset: 0; background: var(--bg);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 16px; z-index: 500;
+  }
+  .loading-logo { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); }
+  .loading-sub  { font-size: 0.85rem; color: var(--text3); font-family: 'DM Mono', monospace; }
+  .spinner { width: 28px; height: 28px; border: 2px solid var(--surface3); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── STATS ── */
+  .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 24px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; }
+  .stat-value { font-family: 'DM Serif Display', serif; font-size: 2.1rem; color: var(--accent); line-height: 1; margin-bottom: 5px; }
+  .stat-label { font-size: 0.75rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+
+  /* ── PANEL / DECK LIST ── */
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; margin-bottom: 18px; }
+  .section-title { font-family: 'DM Serif Display', serif; font-size: 1.15rem; margin-bottom: 14px; color: var(--text); }
+  .deck-list { display: flex; flex-direction: column; gap: 8px; }
+  .deck-item { display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); transition: border-color 0.15s; }
+  .deck-item:hover { border-color: var(--border2); }
+  .deck-info { display: flex; flex-direction: column; gap: 3px; }
+  .deck-name { font-weight: 500; font-size: 0.92rem; }
+  .deck-meta { font-size: 0.78rem; color: var(--text3); }
+  .deck-counts { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .badge { padding: 2px 9px; border-radius: 20px; font-size: 0.73rem; font-family: 'DM Mono', monospace; font-weight: 500; }
+  .badge-red  { background: rgba(248,81,73,0.15);  color: var(--red);    }
+  .badge-blue { background: rgba(88,166,255,0.15); color: var(--blue);   }
+  .badge-green{ background: rgba(63,185,80,0.15);  color: var(--green);  }
+
+  /* ── STUDY ── */
+  .study-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+  .study-progress { flex: 1; height: 4px; background: var(--surface3); border-radius: 2px; margin: 0 18px; overflow: hidden; }
+  .study-progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s ease; }
+
+  /* CARD */
+  .card-container { perspective: 1200px; height: 360px; margin-bottom: 14px; }
+  .card { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.42s cubic-bezier(0.4,0,0.2,1); cursor: pointer; }
+  .card.flipped { transform: rotateY(180deg); }
+  .card-face {
+    position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    overflow-y: auto; overflow-x: hidden; padding: 26px 30px 48px;
+    scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
+  }
+  .card-face::-webkit-scrollbar { width: 5px; }
+  .card-face::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+  .card-inner { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 11px; }
+  .card-back { transform: rotateY(180deg); background: var(--surface2); border-color: var(--accent); }
+  .card-tag  { font-size: 0.7rem; font-family: 'DM Mono', monospace; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; background: var(--accent-dim); padding: 3px 10px; border-radius: 20px; }
+  .card-question { font-family: 'DM Serif Display', serif; font-size: 1.4rem; line-height: 1.45; color: var(--text); word-break: break-word; }
+  .card-hint { font-size: 0.78rem; color: var(--text3); font-style: italic; }
+  .card-answer-label { font-size: 0.68rem; font-family: 'DM Mono', monospace; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; }
+  .card-answer { font-size: 1rem; line-height: 1.7; color: var(--text); word-break: break-word; text-align: left; width: 100%; white-space: pre-wrap; }
+  .flip-badge { position: absolute; bottom: 11px; right: 13px; font-size: 0.67rem; color: var(--text3); font-family: 'DM Mono', monospace; pointer-events: none; z-index: 5; background: var(--surface); padding: 2px 6px; border-radius: 4px; }
+  .card-back .flip-badge { background: var(--surface2); }
+
+  /* RATING */
+  .show-answer-btn { width: 100%; padding: 14px; border-radius: var(--radius-sm); background: var(--accent-dim); border: 1px dashed var(--accent); color: var(--accent); font-size: 0.92rem; font-weight: 600; cursor: pointer; font-family: 'Instrument Sans', sans-serif; transition: background 0.15s; margin-bottom: 4px; }
+  .show-answer-btn:hover { background: rgba(57,212,165,0.2); }
+  .rating-area { display: none; flex-direction: column; align-items: center; gap: 10px; }
+  .rating-area.visible { display: flex; }
+  .rating-label { font-size: 0.78rem; color: var(--text3); font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+  .rating-buttons { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; width: 100%; }
+  .rating-btn { padding: 12px 8px; border-radius: var(--radius-sm); border: 1px solid var(--border); cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 0.875rem; font-weight: 600; transition: all 0.15s; display: flex; flex-direction: column; align-items: center; gap: 4px; background: var(--surface2); color: var(--text); }
+  .rating-btn .iv { font-size: 0.68rem; font-family: 'DM Mono', monospace; font-weight: 400; opacity: 0.7; }
+  .rating-btn:hover { transform: translateY(-2px); }
+  .rating-btn.again { border-color: var(--red); }    .rating-btn.again:hover { background: rgba(248,81,73,0.15); color: var(--red); }
+  .rating-btn.hard  { border-color: var(--orange); } .rating-btn.hard:hover  { background: rgba(210,153,34,0.15); color: var(--orange); }
+  .rating-btn.good  { border-color: var(--blue); }   .rating-btn.good:hover  { background: rgba(88,166,255,0.15); color: var(--blue); }
+  .rating-btn.easy  { border-color: var(--green); }  .rating-btn.easy:hover  { background: rgba(63,185,80,0.15); color: var(--green); }
+
+  /* ── PROGRESS ── */
+  .kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 22px; }
+  .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; }
+  .kpi-val { font-family: 'DM Serif Display', serif; font-size: 1.9rem; line-height: 1; margin-bottom: 5px; }
+  .kpi-lbl { font-size: 0.73rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; }
+  .cat-table { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .cat-head { display: grid; grid-template-columns: 1.6fr 65px 75px 65px 140px 100px; padding: 10px 16px; font-size: 0.7rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'DM Mono', monospace; border-bottom: 1px solid var(--border); background: var(--surface2); }
+  .cat-row  { display: grid; grid-template-columns: 1.6fr 65px 75px 65px 140px 100px; padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.875rem; align-items: center; transition: background 0.1s; }
+  .cat-row:last-child { border-bottom: none; }
+  .cat-row:hover { background: var(--surface2); }
+  .ret-wrap { display: flex; align-items: center; gap: 7px; }
+  .ret-bg { flex: 1; height: 6px; background: var(--surface3); border-radius: 3px; overflow: hidden; }
+  .ret-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+  .ret-pct { font-family: 'DM Mono', monospace; font-size: 0.74rem; min-width: 30px; text-align: right; }
+  .mat-badge { font-size: 0.7rem; font-family: 'DM Mono', monospace; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
+
+  /* ── CARDS TABLE ── */
+  .manager-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 10px; }
+  .search-box { flex: 1; min-width: 160px; padding: 7px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-size: 0.875rem; font-family: 'Instrument Sans', sans-serif; outline: none; }
+  .search-box:focus { border-color: var(--accent); }
+  .search-box::placeholder { color: var(--text3); }
+  .cards-table { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .cards-table-header { display: grid; grid-template-columns: 1fr 1fr 110px 90px 70px; padding: 10px 14px; font-size: 0.7rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'DM Mono', monospace; border-bottom: 1px solid var(--border); background: var(--surface2); }
+  .card-row { display: grid; grid-template-columns: 1fr 1fr 110px 90px 70px; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 0.875rem; align-items: center; transition: background 0.1s; }
+  .card-row:last-child { border-bottom: none; }
+  .card-row:hover { background: var(--surface2); }
+  .card-row-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 10px; }
+  .card-row-tag { font-size: 0.7rem; font-family: 'DM Mono', monospace; color: var(--accent); background: var(--accent-dim); padding: 2px 7px; border-radius: 20px; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-row-actions { display: flex; gap: 5px; justify-content: flex-end; }
+  .icon-btn { background: none; border: none; cursor: pointer; color: var(--text3); padding: 4px 5px; border-radius: 5px; font-size: 0.875rem; transition: all 0.1s; font-family: 'Instrument Sans', sans-serif; }
+  .icon-btn:hover { color: var(--text); background: var(--surface3); }
+  .icon-btn.del:hover { color: var(--red); }
+
+  /* ── IMPORT/EXPORT & SETTINGS ── */
+  .io-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; margin-bottom: 18px; }
+  .io-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin-bottom: 7px; }
+  .io-desc { font-size: 0.83rem; color: var(--text3); margin-bottom: 14px; line-height: 1.55; }
+  .io-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .drop-zone { border: 2px dashed var(--border); border-radius: var(--radius-sm); padding: 26px; text-align: center; color: var(--text3); font-size: 0.875rem; cursor: pointer; transition: all 0.15s; margin-bottom: 14px; }
+  .drop-zone:hover, .drop-zone.drag-over { border-color: var(--accent); background: var(--accent-dim); color: var(--accent); }
+  .code-preview { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 13px; font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text3); max-height: 200px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; }
+
+  /* GitHub setup callout */
+  .gh-setup-banner {
+    background: rgba(88,166,255,0.07);
+    border: 1px solid rgba(88,166,255,0.25);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .gh-setup-banner .gh-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+  .gh-setup-banner h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 5px; color: var(--blue); }
+  .gh-setup-banner p { font-size: 0.82rem; color: var(--text3); line-height: 1.5; }
+
+  /* Config form inside settings */
+  .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .config-grid .full { grid-column: 1/-1; }
+
+  /* ── MODAL ── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.78); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; }
+  .modal-title { font-family: 'DM Serif Display', serif; font-size: 1.25rem; margin-bottom: 18px; }
+  .form-group { margin-bottom: 15px; }
+  .form-label { display: block; font-size: 0.76rem; color: var(--text2); margin-bottom: 5px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'DM Mono', monospace; }
+  .form-hint { font-size: 0.76rem; color: var(--text3); margin-top: 5px; line-height: 1.4; }
+  .form-input, .form-textarea { width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; color: var(--text); font-size: 0.9rem; font-family: 'Instrument Sans', sans-serif; outline: none; transition: border-color 0.15s; }
+  .form-textarea { resize: vertical; min-height: 95px; line-height: 1.5; }
+  .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 22px; }
+
+  /* step list in setup modal */
+  .setup-steps { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 18px 0; }
+  .setup-steps li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.875rem; color: var(--text2); line-height: 1.5; }
+  .step-num { width: 22px; height: 22px; border-radius: 50%; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-family: 'DM Mono', monospace; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .setup-steps a { color: var(--blue); text-decoration: none; }
+  .setup-steps a:hover { text-decoration: underline; }
+  .setup-steps code { background: var(--surface3); padding: 1px 5px; border-radius: 4px; font-family: 'DM Mono', monospace; font-size: 0.82rem; color: var(--accent); }
+
+  /* ── EMPTY / COMPLETE ── */
+  .empty-state { text-align: center; padding: 52px 20px; color: var(--text3); }
+  .empty-state .icon { font-size: 2.6rem; margin-bottom: 13px; }
+  .empty-state h3 { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--text2); margin-bottom: 7px; }
+  .empty-state p { font-size: 0.875rem; line-height: 1.5; max-width: 340px; margin: 0 auto 16px; }
+  .session-complete { text-align: center; padding: 56px 20px; }
+  .session-complete .icon { font-size: 2.8rem; margin-bottom: 14px; }
+  .session-complete h2 { font-family: 'DM Serif Display', serif; font-size: 1.7rem; margin-bottom: 7px; }
+  .session-complete p { color: var(--text3); font-size: 0.9rem; margin-bottom: 22px; }
+
+  /* ── TOAST ── */
+  .toast { position: fixed; bottom: 22px; right: 22px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 11px 16px; font-size: 0.875rem; color: var(--text); z-index: 300; transform: translateY(20px); opacity: 0; transition: all 0.2s ease; display: flex; align-items: center; gap: 7px; max-width: 320px; }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast.success { border-color: var(--accent); }
+  .toast.error   { border-color: var(--red);    }
+  .toast.info    { border-color: var(--blue);   }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .main { padding: 12px; }
+    .stats-grid { grid-template-columns: repeat(2,1fr); }
+    .kpi-grid { grid-template-columns: repeat(2,1fr); }
+    .rating-buttons { grid-template-columns: repeat(2,1fr); }
+    .cards-table-header { display: none; }
+    .card-row { grid-template-columns: 1fr auto; }
+    .card-row > :nth-child(3), .card-row > :nth-child(4) { display: none; }
+    .cat-head, .cat-row { grid-template-columns: 1fr 55px 90px 85px; }
+    .cat-head > :nth-child(3), .cat-head > :nth-child(4),
+    .cat-row  > :nth-child(3), .cat-row  > :nth-child(4) { display: none; }
+    .card-container { height: 300px; }
+    .config-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Loading screen (shown while fetching from GitHub) -->
+<div id="loading-screen">
+  <div class="loading-logo">Paeds Flashcards</div>
+  <div class="spinner"></div>
+  <div class="loading-sub" id="loading-msg">Loading…</div>
+</div>
+
+<header>
+  <div class="logo">Paeds<span>flashcards</span></div>
+  <div class="header-right">
+    <!-- Sync status pill -->
+    <div class="sync-pill nosync" id="sync-pill" onclick="openModal('ghSetupModal')" title="Configure GitHub sync">
+      <div class="dot"></div>
+      <span id="sync-label">Not synced</span>
+    </div>
+    <button class="btn btn-ghost btn-sm" onclick="manualSync()" title="Push to GitHub now" id="sync-btn" style="display:none">↑ Sync</button>
+    <button class="btn btn-accent btn-sm" onclick="openModal('addModal')">+ Add Card</button>
+  </div>
+</header>
+
+<div class="nav-tabs">
+  <button class="nav-tab active" data-view="dashboard" onclick="showView('dashboard')">Dashboard</button>
+  <button class="nav-tab" data-view="study"     onclick="showView('study')">Study</button>
+  <button class="nav-tab" data-view="progress"  onclick="showView('progress')">Progress</button>
+  <button class="nav-tab" data-view="cards"     onclick="showView('cards')">All Cards</button>
+  <button class="nav-tab" data-view="settings"  onclick="showView('settings')">Settings</button>
+</div>
+
+<div class="main">
+
+<!-- ══ DASHBOARD ══ -->
+<div id="view-dashboard" class="view active">
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value" id="stat-total">0</div><div class="stat-label">Total Cards</div></div>
+    <div class="stat-card"><div class="stat-value" id="stat-due" style="color:var(--red)">0</div><div class="stat-label">Due Today</div></div>
+    <div class="stat-card"><div class="stat-value" id="stat-new" style="color:var(--blue)">0</div><div class="stat-label">New Cards</div></div>
+    <div class="stat-card"><div class="stat-value" id="stat-streak" style="color:var(--orange)">0</div><div class="stat-label">Day Streak 🔥</div></div>
+  </div>
+  <div class="panel">
+    <div class="section-title">Decks</div>
+    <div id="deck-list" class="deck-list"></div>
+  </div>
+</div>
+
+<!-- ══ STUDY ══ -->
+<div id="view-study" class="view">
+  <div id="study-content">
+    <div class="study-header">
+      <span id="study-count" style="font-family:'DM Mono',monospace;font-size:0.83rem;color:var(--text3)">0 remaining</span>
+      <div class="study-progress"><div class="study-progress-fill" id="study-progress" style="width:0%"></div></div>
+      <button class="btn btn-ghost btn-sm" onclick="endSession()">End</button>
+    </div>
+
+    <div class="card-container">
+      <div class="card" id="study-card" onclick="toggleFlip()">
+        <div class="card-face" id="card-front">
+          <div class="card-inner">
+            <div class="card-tag"      id="card-tag">—</div>
+            <div class="card-question" id="card-question">Select a deck and press Study</div>
+            <div class="card-hint"     id="card-hint">Tap card or press Space to flip</div>
+          </div>
+          <div class="flip-badge">front · tap to flip ↻</div>
+        </div>
+        <div class="card-face card-back" id="card-back">
+          <div class="card-inner">
+            <div class="card-answer-label">Answer</div>
+            <div class="card-answer" id="card-answer"></div>
+          </div>
+          <div class="flip-badge">back · tap to flip ↻</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="show-answer-btn" id="show-answer-btn" onclick="revealAnswer()" style="display:none">Show Answer</button>
+
+    <div class="rating-area" id="rating-area">
+      <div class="rating-label">How well did you know it?</div>
+      <div class="rating-buttons">
+        <button class="rating-btn again" onclick="rateCard(1)">Again<span class="iv" id="iv1">&lt;1m</span></button>
+        <button class="rating-btn hard"  onclick="rateCard(2)">Hard <span class="iv" id="iv2">—</span></button>
+        <button class="rating-btn good"  onclick="rateCard(3)">Good <span class="iv" id="iv3">—</span></button>
+        <button class="rating-btn easy"  onclick="rateCard(4)">Easy <span class="iv" id="iv4">—</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="session-complete" class="session-complete" style="display:none">
+    <div class="icon">🎉</div>
+    <h2>Session Complete</h2>
+    <p id="session-summary">All done!</p>
+    <button class="btn btn-accent btn-lg" onclick="showView('dashboard')">Back to Dashboard</button>
+  </div>
+</div>
+
+<!-- ══ PROGRESS ══ -->
+<div id="view-progress" class="view">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px">
+    <div class="section-title" style="margin:0;font-size:1.35rem">Progress Tracker</div>
+  </div>
+  <div class="kpi-grid" id="progress-kpis"></div>
+  <div class="cat-table">
+    <div class="cat-head">
+      <span>Deck / Category</span><span>Cards</span><span>Reviews</span><span>Mastered</span><span>Retention</span><span>Level</span>
+    </div>
+    <div id="progress-rows"></div>
+  </div>
+</div>
+
+<!-- ══ ALL CARDS ══ -->
+<div id="view-cards" class="view">
+  <div class="manager-toolbar">
+    <input type="text" class="search-box" placeholder="Search cards…" id="search-input" oninput="renderCardsTable()">
+    <div style="display:flex;gap:8px">
+      <select class="form-input" style="width:auto;padding:6px 11px" id="filter-tag" onchange="renderCardsTable()">
+        <option value="">All decks</option>
+      </select>
+      <button class="btn btn-accent" onclick="openModal('addModal')">+ Add Card</button>
+    </div>
+  </div>
+  <div class="cards-table">
+    <div class="cards-table-header">
+      <span>Question</span><span>Answer</span><span>Deck</span><span>Next Due</span><span></span>
+    </div>
+    <div id="cards-table-body"></div>
+  </div>
+</div>
+
+<!-- ══ SETTINGS ══ -->
+<div id="view-settings" class="view">
+
+  <!-- GitHub Sync section -->
+  <div class="io-section">
+    <div class="io-title">☁️ GitHub Sync</div>
+    <div class="io-desc" id="gh-status-desc">Connect a GitHub repository to keep your cards and SM-2 progress synchronised across all your devices.</div>
+
+    <div id="gh-connected-info" style="display:none;margin-bottom:16px">
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;font-family:'DM Mono',monospace;font-size:0.82rem;color:var(--text2)">
+        <div>Repo: <span id="gh-info-repo" style="color:var(--accent)"></span></div>
+        <div style="margin-top:4px">File: <span id="gh-info-file" style="color:var(--accent)"></span></div>
+        <div style="margin-top:4px">Last synced: <span id="gh-info-last"></span></div>
+      </div>
+    </div>
+
+    <div class="io-actions">
+      <button class="btn btn-accent" onclick="openModal('ghSetupModal')" id="gh-connect-btn">Configure GitHub</button>
+      <button class="btn btn-ghost" onclick="manualSync()" id="gh-sync-now-btn" style="display:none">↑ Push to GitHub now</button>
+      <button class="btn btn-ghost" onclick="fetchFromGitHub(true)" id="gh-pull-btn" style="display:none">↓ Pull from GitHub</button>
+      <button class="btn btn-danger btn-sm" onclick="disconnectGitHub()" id="gh-disconnect-btn" style="display:none">Disconnect</button>
+    </div>
+  </div>
+
+  <!-- Export -->
+  <div class="io-section">
+    <div class="io-title">📤 Export Backup</div>
+    <div class="io-desc">Download everything as a local JSON file. Good to keep a backup even when using GitHub sync.</div>
+    <div class="io-actions">
+      <button class="btn btn-accent" onclick="exportData()">Download cards.json</button>
+      <button class="btn btn-surface" onclick="copyToClipboard()">Copy to clipboard</button>
+    </div>
+  </div>
+
+  <!-- Import -->
+  <div class="io-section">
+    <div class="io-title">📥 Import Cards</div>
+    <div class="io-desc">Import from a local cards.json. Existing cards with matching IDs keep their SM-2 progress. After import the new data will be pushed to GitHub if sync is configured.</div>
+    <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+      Drop your cards.json here, or click to browse
+    </div>
+    <input type="file" id="file-input" accept=".json" style="display:none" onchange="handleFileImport(event)">
+  </div>
+
+  <!-- Paste JSON -->
+  <div class="io-section">
+    <div class="io-title">📋 Paste JSON from Claude</div>
+    <div class="io-desc">Paste a JSON array of cards generated by Claude. New cards are merged in — progress on existing cards is untouched.</div>
+    <textarea class="form-textarea" id="paste-json" placeholder='[{"question":"What is X?","answer":"X is…","tag":"Nephrology"}]' style="min-height:110px"></textarea>
+    <div style="margin-top:10px"><button class="btn btn-accent" onclick="importPasted()">Import Pasted Cards</button></div>
+  </div>
+
+  <!-- Format reference -->
+  <div class="io-section">
+    <div class="io-title">📖 Card Format for Claude</div>
+    <div class="io-desc">Ask Claude to generate cards in this format, then paste above:</div>
+    <div class="code-preview">[
+  {
+    "question": "What organisms most commonly cause neonatal meningitis?",
+    "answer": "Group B Streptococcus, E. coli, Listeria monocytogenes",
+    "tag": "Neonatology"
+  }
+]</div>
+  </div>
+
+</div><!-- /settings -->
+</div><!-- /main -->
+
+<!-- ══════════ MODALS ══════════ -->
+
+<!-- Add / Edit Card -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal">
+    <div class="modal-title" id="modal-title">Add New Card</div>
+    <div class="form-group">
+      <label class="form-label">Question</label>
+      <textarea class="form-textarea" id="input-question" placeholder="What do you want to remember?"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Answer</label>
+      <textarea class="form-textarea" id="input-answer" placeholder="The answer, key facts, or explanation…"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Deck / Tag</label>
+      <input type="text" class="form-input" id="input-tag" placeholder="e.g. Respiratory, Cardiology" list="tag-datalist">
+      <datalist id="tag-datalist"></datalist>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal('addModal')">Cancel</button>
+      <button class="btn btn-accent" onclick="saveCard()">Save Card</button>
+    </div>
+  </div>
+</div>
+
+<!-- Import Mode -->
+<div class="modal-overlay" id="importModal">
+  <div class="modal">
+    <div class="modal-title">Import — choose mode</div>
+    <p style="color:var(--text3);font-size:0.875rem;margin-bottom:18px">Merge keeps all existing cards and adds new ones. Replace wipes everything.</p>
+    <div class="io-actions">
+      <button class="btn btn-accent"  onclick="doImport('merge')">Merge with existing</button>
+      <button class="btn btn-surface" onclick="doImport('replace')">Replace all</button>
+      <button class="btn btn-ghost"   onclick="closeModal('importModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- GitHub Setup -->
+<div class="modal-overlay" id="ghSetupModal">
+  <div class="modal" style="max-width:620px">
+    <div class="modal-title">☁️ Connect GitHub Sync</div>
+
+    <p style="font-size:0.85rem;color:var(--text3);line-height:1.55;margin-bottom:4px">
+      Your <strong style="color:var(--text)">cards.json</strong> will be stored in a GitHub repository. Every device reads and writes the same file, so your SM-2 progress follows you everywhere.
+    </p>
+
+    <ul class="setup-steps">
+      <li>
+        <div class="step-num">1</div>
+        <span>Create a free account at <a href="https://github.com" target="_blank">github.com</a> if you don't have one, then create a new <strong>private</strong> repository — name it anything, e.g. <code>paeds-flashcards</code>.</span>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <span>Go to <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens/new</a>. Create a <strong>Classic</strong> token with the <code>repo</code> scope ticked. Copy the token — you only see it once.</span>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <span>Fill in the fields below and click Save. Your token is stored only in this browser's localStorage — it is never sent anywhere except GitHub's own API.</span>
+      </li>
+    </ul>
+
+    <div class="config-grid">
+      <div class="form-group">
+        <label class="form-label">GitHub Username</label>
+        <input type="text" class="form-input" id="cfg-owner" placeholder="your-username" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Repository Name</label>
+        <input type="text" class="form-input" id="cfg-repo" placeholder="paeds-flashcards" autocomplete="off">
+      </div>
+      <div class="form-group full">
+        <label class="form-label">Personal Access Token</label>
+        <input type="password" class="form-input" id="cfg-token" placeholder="ghp_…" autocomplete="off">
+        <div class="form-hint">Classic token with the <strong>repo</strong> scope. Stored only in your browser.</div>
+      </div>
+      <div class="form-group full">
+        <label class="form-label">File Path in Repo <span style="font-weight:400;color:var(--text3)">(leave as default unless you know why)</span></label>
+        <input type="text" class="form-input" id="cfg-path" placeholder="cards.json" value="cards.json" autocomplete="off">
+      </div>
+    </div>
+
+    <div id="gh-test-result" style="display:none;margin-top:4px;padding:10px 14px;border-radius:var(--radius-sm);font-size:0.83rem;font-family:'DM Mono',monospace"></div>
+
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal('ghSetupModal')">Cancel</button>
+      <button class="btn btn-surface" onclick="testGitHubConnection()" id="test-gh-btn">Test connection</button>
+      <button class="btn btn-accent" onclick="saveGitHubConfig()" id="save-gh-btn">Save &amp; Sync</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+// ═══════════════════════════════════════════════════════
+//  CONSTANTS
+// ═══════════════════════════════════════════════════════
+const LS_CARDS   = 'pf_cards_v3';
+const LS_STATS   = 'pf_stats_v1';
+const LS_STREAK_DAY = 'pf_streak_day';
+const LS_STREAK_VAL = 'pf_streak';
+const LS_GH_CFG  = 'pf_gh_config';
+const LS_GH_SHA  = 'pf_gh_sha';      // last known SHA of the remote file
+const LS_GH_LAST = 'pf_gh_last_sync';
+
+// ═══════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════
+let cards   = [];
+let tagStats= {};
+let ghCfg   = null;   // { owner, repo, token, path }
+let ghSHA   = null;   // current file SHA on GitHub (needed for updates)
+let pendingPush = false; // dirty flag — push needed
+
+let sessionQueue   = [];
+let currentIndex   = 0;
+let sessionReviewed= 0;
+let sessionTotal   = 0;
+let studyDeckFilter= null;
+let editingId      = null;
+let pendingImportData = null;
+let cardFlipped    = false;
+let answerRevealed = false;
+
+// ═══════════════════════════════════════════════════════
+//  LOCAL STORAGE (cache / offline fallback)
+// ═══════════════════════════════════════════════════════
+function saveLocal() {
+  try {
+    localStorage.setItem(LS_CARDS, JSON.stringify(cards));
+    localStorage.setItem(LS_STATS, JSON.stringify(tagStats));
+  } catch(e) {}
+}
+
+function loadLocal() {
+  try {
+    const c = localStorage.getItem(LS_CARDS); if (c) cards    = JSON.parse(c);
+    const s = localStorage.getItem(LS_STATS); if (s) tagStats = JSON.parse(s);
+  } catch(e) { cards = []; tagStats = {}; }
+}
+
+function loadGhConfig() {
+  try {
+    const raw = localStorage.getItem(LS_GH_CFG);
+    if (raw) { ghCfg = JSON.parse(raw); ghSHA = localStorage.getItem(LS_GH_SHA) || null; }
+  } catch(e) { ghCfg = null; }
+}
+
+function saveGhConfigLocal(cfg) {
+  ghCfg = cfg;
+  localStorage.setItem(LS_GH_CFG, JSON.stringify(cfg));
+}
+
+// ═══════════════════════════════════════════════════════
+//  GITHUB API
+// ═══════════════════════════════════════════════════════
+function ghHeaders(cfg) {
+  return {
+    'Authorization': `Bearer ${cfg.token}`,
+    'Accept':        'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28'
+  };
+}
+
+function ghUrl(cfg) {
+  const path = (cfg.path || 'cards.json').replace(/^\//, '');
+  return `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${path}`;
+}
+
+// Fetch file from GitHub. Returns { cards, stats, sha } or null on error.
+async function fetchFromGitHub(showFeedback = false) {
+  if (!ghCfg) return null;
+  setSyncState('syncing', 'Fetching…');
+  try {
+    const res = await fetch(ghUrl(ghCfg), { headers: ghHeaders(ghCfg) });
+    if (res.status === 404) {
+      // File doesn't exist yet — that's fine for a new repo
+      setSyncState('synced', 'Ready (new file)');
+      ghSHA = null;
+      return null;
+    }
+    if (!res.ok) throw new Error(`GitHub ${res.status}: ${res.statusText}`);
+
+    const json = await res.json();
+    ghSHA = json.sha;
+    localStorage.setItem(LS_GH_SHA, ghSHA);
+
+    const decoded = JSON.parse(atob(json.content.replace(/\n/g,'')));
+    // Expect { cards: [], stats: {} } format
+    if (Array.isArray(decoded)) {
+      // Legacy: just a cards array
+      cards    = normalise(decoded);
+      tagStats = {};
+    } else {
+      cards    = normalise(decoded.cards    || []);
+      tagStats = decoded.stats || {};
+    }
+    saveLocal();
+    setSyncState('synced', 'Synced just now');
+    localStorage.setItem(LS_GH_LAST, Date.now());
+    if (showFeedback) toast('Pulled latest from GitHub', 'success');
+    return { cards, tagStats, sha: ghSHA };
+  } catch(e) {
+    setSyncState('error', 'Sync error');
+    if (showFeedback) toast('GitHub fetch failed: ' + e.message, 'error');
+    console.error('GitHub fetch error', e);
+    return null;
+  }
+}
+
+// Push current state to GitHub.
+async function pushToGitHub(silent = false) {
+  if (!ghCfg) return false;
+  setSyncState('syncing', 'Saving…');
+  const payload = { cards, stats: tagStats };
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+  const body = {
+    message: 'Flashcard sync ' + new Date().toISOString().slice(0,16).replace('T',' '),
+    content
+  };
+  if (ghSHA) body.sha = ghSHA;
+
+  try {
+    const res = await fetch(ghUrl(ghCfg), {
+      method: 'PUT',
+      headers: { ...ghHeaders(ghCfg), 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || res.statusText);
+    }
+    const json = await res.json();
+    ghSHA = json.content.sha;
+    localStorage.setItem(LS_GH_SHA, ghSHA);
+    localStorage.setItem(LS_GH_LAST, Date.now());
+    pendingPush = false;
+    setSyncState('synced', 'Synced just now');
+    if (!silent) toast('Saved to GitHub', 'success');
+    updateSettingsPanel();
+    return true;
+  } catch(e) {
+    setSyncState('error', 'Push failed');
+    if (!silent) toast('GitHub push failed: ' + e.message, 'error');
+    console.error('GitHub push error', e);
+    return false;
+  }
+}
+
+// Unified save: always update localStorage immediately, then push to GitHub
+async function save(autoPush = true) {
+  saveLocal();
+  if (ghCfg && autoPush) {
+    await pushToGitHub(true);
+  } else if (ghCfg) {
+    pendingPush = true;
+    setSyncState('offline', 'Unsaved changes');
+  }
+}
+
+async function manualSync() {
+  if (!ghCfg) { openModal('ghSetupModal'); return; }
+  await pushToGitHub(false);
+}
+
+// ── Test connection ──
+async function testGitHubConnection() {
+  const cfg = readFormCfg();
+  if (!cfg) return;
+  const el = document.getElementById('gh-test-result');
+  el.style.display = 'block';
+  el.style.background = 'rgba(88,166,255,0.08)';
+  el.style.border = '1px solid rgba(88,166,255,0.3)';
+  el.style.color = 'var(--blue)';
+  el.textContent = 'Testing…';
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}`, { headers: ghHeaders(cfg) });
+    if (res.status === 404) throw new Error('Repository not found. Check username and repo name.');
+    if (res.status === 401) throw new Error('Token rejected. Check the token is correct and has the "repo" scope.');
+    if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+    const repo = await res.json();
+    el.style.background = 'rgba(57,212,165,0.08)';
+    el.style.border = '1px solid rgba(57,212,165,0.3)';
+    el.style.color = 'var(--accent)';
+    el.textContent = `✓ Connected to "${repo.full_name}" (${repo.private ? 'private' : 'public'})`;
+  } catch(e) {
+    el.style.background = 'rgba(248,81,73,0.08)';
+    el.style.border = '1px solid rgba(248,81,73,0.3)';
+    el.style.color = 'var(--red)';
+    el.textContent = '✗ ' + e.message;
+  }
+}
+
+function readFormCfg() {
+  const owner = document.getElementById('cfg-owner').value.trim();
+  const repo  = document.getElementById('cfg-repo').value.trim();
+  const token = document.getElementById('cfg-token').value.trim();
+  const path  = document.getElementById('cfg-path').value.trim() || 'cards.json';
+  if (!owner || !repo || !token) { toast('Fill in all fields', 'error'); return null; }
+  return { owner, repo, token, path };
+}
+
+async function saveGitHubConfig() {
+  const cfg = readFormCfg();
+  if (!cfg) return;
+  saveGhConfigLocal(cfg);
+  ghSHA = null;
+  closeModal('ghSetupModal');
+  document.getElementById('gh-test-result').style.display = 'none';
+  document.getElementById('sync-btn').style.display = 'inline-flex';
+  // Try to fetch existing file first, then push current state if none
+  toast('Connecting to GitHub…', 'info');
+  const existing = await fetchFromGitHub(false);
+  if (!existing) {
+    // Push current local state to create the file
+    await pushToGitHub(false);
+  }
+  updateSettingsPanel();
+  renderDashboard();
+}
+
+function disconnectGitHub() {
+  if (!confirm('Disconnect GitHub sync? Your local data stays intact.')) return;
+  ghCfg = null; ghSHA = null;
+  localStorage.removeItem(LS_GH_CFG);
+  localStorage.removeItem(LS_GH_SHA);
+  setSyncState('nosync', 'Not synced');
+  document.getElementById('sync-btn').style.display = 'none';
+  updateSettingsPanel();
+  toast('GitHub sync disconnected', 'info');
+}
+
+// ── Sync pill UI ──
+function setSyncState(state, label) {
+  const pill = document.getElementById('sync-pill');
+  pill.className = 'sync-pill ' + state;
+  document.getElementById('sync-label').textContent = label;
+}
+
+function updateSyncPillFromTimestamp() {
+  if (!ghCfg) { setSyncState('nosync', 'Not synced'); return; }
+  const last = parseInt(localStorage.getItem(LS_GH_LAST) || '0');
+  if (!last) { setSyncState('offline', 'Never synced'); return; }
+  const mins = Math.round((Date.now() - last) / 60000);
+  if (mins < 1)  setSyncState('synced', 'Synced just now');
+  else if (mins < 60) setSyncState('synced', `Synced ${mins}m ago`);
+  else setSyncState('synced', `Synced ${Math.round(mins/60)}h ago`);
+}
+
+// Update the Settings panel info
+function updateSettingsPanel() {
+  const connected = !!ghCfg;
+  document.getElementById('gh-connect-btn').textContent  = connected ? 'Change Config' : 'Configure GitHub';
+  document.getElementById('gh-sync-now-btn').style.display   = connected ? 'inline-flex' : 'none';
+  document.getElementById('gh-pull-btn').style.display        = connected ? 'inline-flex' : 'none';
+  document.getElementById('gh-disconnect-btn').style.display  = connected ? 'inline-flex' : 'none';
+  document.getElementById('gh-connected-info').style.display  = connected ? 'block' : 'none';
+  if (connected) {
+    document.getElementById('gh-info-repo').textContent = ghCfg.owner + '/' + ghCfg.repo;
+    document.getElementById('gh-info-file').textContent = ghCfg.path || 'cards.json';
+    const last = parseInt(localStorage.getItem(LS_GH_LAST) || '0');
+    document.getElementById('gh-info-last').textContent = last
+      ? new Date(last).toLocaleString('en-GB', {day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})
+      : 'Never';
+  }
+  document.getElementById('gh-status-desc').textContent = connected
+    ? 'Your progress is synced to GitHub and accessible from any device.'
+    : 'Connect a GitHub repository to keep your cards and SM-2 progress synchronised across all your devices.';
+}
+
+// Pre-fill setup modal from existing config
+function prefillSetupModal() {
+  if (!ghCfg) return;
+  document.getElementById('cfg-owner').value = ghCfg.owner || '';
+  document.getElementById('cfg-repo').value  = ghCfg.repo  || '';
+  document.getElementById('cfg-token').value = ghCfg.token || '';
+  document.getElementById('cfg-path').value  = ghCfg.path  || 'cards.json';
+}
+
+// ═══════════════════════════════════════════════════════
+//  SM-2 ALGORITHM
+// ═══════════════════════════════════════════════════════
+function today()   { return Math.floor(Date.now() / 86400000); }
+function isDue(c)  { return (c.nextDue || 0) <= today(); }
+function isNew(c)  { return !c.reps || c.reps === 0; }
+
+function sm2(card, q) {
+  let { interval = 1, easeFactor = 2.5, reps = 0 } = card;
+  if (q === 1) { reps = 0; interval = 1; }
+  else {
+    if (reps === 0)      interval = 1;
+    else if (reps === 1) interval = 6;
+    else                 interval = Math.round(interval * easeFactor);
+    reps++;
+    const d = q - 1;
+    easeFactor += 0.1 - (3 - d) * (0.08 + (3 - d) * 0.02);
+    if (easeFactor < 1.3) easeFactor = 1.3;
+    if (q === 2) interval = Math.max(1, Math.round(interval * 0.6));
+    if (q === 4) interval = Math.round(interval * 1.3);
+  }
+  card.interval    = interval;
+  card.easeFactor  = parseFloat(easeFactor.toFixed(2));
+  card.reps        = reps;
+  card.nextDue     = today() + interval;
+  card.lastReviewed= Date.now();
+  return card;
+}
+
+function previewInterval(card, q) {
+  if (q === 1) return '<1m';
+  const { interval = 1, easeFactor = 2.5, reps = 0 } = card;
+  if (reps === 0) return '1d';
+  if (reps === 1) return '6d';
+  let n = Math.round(interval * easeFactor);
+  if (q === 2) n = Math.max(1, Math.round(n * 0.6));
+  if (q === 4) n = Math.round(n * 1.3);
+  if (n < 2)  return '1d';
+  if (n < 14) return n + 'd';
+  if (n < 60) return Math.round(n/7) + 'w';
+  return Math.round(n/30) + 'mo';
+}
+
+// ── Streak ──
+function getStreak() {
+  const lastDay = parseInt(localStorage.getItem(LS_STREAK_DAY) || '0');
+  const val     = parseInt(localStorage.getItem(LS_STREAK_VAL) || '0');
+  if (lastDay < today() - 1) return 0;
+  return val;
+}
+function bumpStreak() {
+  const t = today();
+  const lastDay = parseInt(localStorage.getItem(LS_STREAK_DAY) || '0');
+  let val = parseInt(localStorage.getItem(LS_STREAK_VAL) || '0');
+  if (lastDay === t) return;
+  val = (lastDay === t - 1) ? val + 1 : 1;
+  localStorage.setItem(LS_STREAK_VAL, val);
+  localStorage.setItem(LS_STREAK_DAY, t);
+}
+
+// ── Stats ──
+function recordReview(tag, q) {
+  if (!tagStats[tag]) tagStats[tag] = { reviews:0, good:0, again:0 };
+  tagStats[tag].reviews++;
+  if (q >= 3) tagStats[tag].good++;
+  if (q === 1) tagStats[tag].again++;
+}
+
+// ═══════════════════════════════════════════════════════
+//  VIEW ROUTING
+// ═══════════════════════════════════════════════════════
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.querySelector(`.nav-tab[data-view="${name}"]`)?.classList.add('active');
+  if (name === 'dashboard') renderDashboard();
+  if (name === 'study')     startSession();
+  if (name === 'progress')  renderProgress();
+  if (name === 'cards')     { renderCardsTable(); populateTagFilter(); }
+  if (name === 'settings')  { updateSettingsPanel(); }
+}
+
+// ═══════════════════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════════════════
+function renderDashboard() {
+  document.getElementById('stat-total').textContent  = cards.length;
+  document.getElementById('stat-due').textContent    = cards.filter(c => isDue(c) && !isNew(c)).length;
+  document.getElementById('stat-new').textContent    = cards.filter(c => isNew(c)).length;
+  document.getElementById('stat-streak').textContent = getStreak();
+
+  const tags = [...new Set(cards.map(c => c.tag || 'General'))].sort();
+  const dl   = document.getElementById('deck-list');
+
+  if (cards.length === 0) {
+    dl.innerHTML = `<div class="empty-state">
+      <div class="icon">🗂️</div>
+      <h3>No cards yet</h3>
+      <p>Import your cards.json or add cards manually.</p>
+      <button class="btn btn-accent" onclick="openModal('addModal')">+ Add first card</button>
+    </div>`;
+    return;
+  }
+
+  dl.innerHTML = tags.map(tag => {
+    const tc  = cards.filter(c => (c.tag||'General') === tag);
+    const due = tc.filter(c => isDue(c) && !isNew(c)).length;
+    const nw  = tc.filter(c => isNew(c)).length;
+    const ts  = tagStats[tag] || {};
+    const ret = ts.reviews > 0 ? Math.round((ts.good / ts.reviews) * 100) : null;
+    return `<div class="deck-item">
+      <div class="deck-info">
+        <span class="deck-name">${esc(tag)}</span>
+        <span class="deck-meta">${tc.length} cards${ret !== null ? ` · ${ret}% retention` : ''}</span>
+      </div>
+      <div class="deck-counts">
+        ${due > 0 ? `<span class="badge badge-red">${due} due</span>` : ''}
+        ${nw  > 0 ? `<span class="badge badge-blue">${nw} new</span>` : ''}
+        ${due === 0 && nw === 0 ? `<span class="badge badge-green">✓ done</span>` : ''}
+        <button class="btn btn-ghost btn-sm" onclick="studyDeck('${esc(tag)}')">Study</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  PROGRESS TRACKER
+// ═══════════════════════════════════════════════════════
+function renderProgress() {
+  const totalReviews = Object.values(tagStats).reduce((a,s) => a + (s.reviews||0), 0);
+  const totalGood    = Object.values(tagStats).reduce((a,s) => a + (s.good||0),    0);
+  const mastered     = cards.filter(c => (c.reps||0) >= 3 && (c.interval||0) >= 21).length;
+  const overallRet   = totalReviews > 0 ? Math.round((totalGood/totalReviews)*100) : 0;
+
+  document.getElementById('progress-kpis').innerHTML = `
+    <div class="kpi-card"><div class="kpi-val" style="color:var(--accent)">${totalReviews}</div><div class="kpi-lbl">Total Reviews</div></div>
+    <div class="kpi-card"><div class="kpi-val" style="color:var(--green)">${mastered}</div><div class="kpi-lbl">Cards Mastered</div></div>
+    <div class="kpi-card"><div class="kpi-val" style="color:var(--blue)">${overallRet}%</div><div class="kpi-lbl">Overall Retention</div></div>
+  `;
+
+  const tags = [...new Set(cards.map(c => c.tag||'General'))].sort();
+  if (!tags.length) {
+    document.getElementById('progress-rows').innerHTML = `<div class="empty-state"><div class="icon">📊</div><h3>No data yet</h3><p>Start reviewing to see progress by category.</p></div>`;
+    return;
+  }
+
+  document.getElementById('progress-rows').innerHTML = tags.map(tag => {
+    const tc  = cards.filter(c => (c.tag||'General') === tag);
+    const ts  = tagStats[tag] || { reviews:0, good:0 };
+    const mst = tc.filter(c => (c.reps||0) >= 3 && (c.interval||0) >= 21).length;
+    const mPct= tc.length > 0 ? Math.round((mst/tc.length)*100) : 0;
+    const ret = ts.reviews > 0 ? Math.round((ts.good/ts.reviews)*100) : null;
+
+    let bc = 'var(--surface3)';
+    if (ret !== null) {
+      if      (ret >= 85) bc = 'var(--green)';
+      else if (ret >= 70) bc = 'var(--blue)';
+      else if (ret >= 55) bc = 'var(--orange)';
+      else                bc = 'var(--red)';
+    }
+    let ml='Unstarted', mb='rgba(88,102,126,0.25)', mf='var(--text3)';
+    if (ts.reviews > 0 && mPct < 30)        { ml='Learning';   mb='rgba(248,81,73,0.15)';  mf='var(--red)';    }
+    else if (mPct >= 30 && mPct < 70)       { ml='Developing'; mb='rgba(210,153,34,0.15)'; mf='var(--orange)'; }
+    else if (mPct >= 70 && mPct < 95)       { ml='Proficient'; mb='rgba(88,166,255,0.15)'; mf='var(--blue)';   }
+    else if (mPct >= 95 && ts.reviews > 0)  { ml='Mastered';   mb='rgba(63,185,80,0.15)';  mf='var(--green)';  }
+
+    return `<div class="cat-row">
+      <div style="font-weight:500">${esc(tag)}</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--text2)">${tc.length}</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--text2)">${ts.reviews||0}</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--green)">${mst}</div>
+      <div>
+        ${ret !== null
+          ? `<div class="ret-wrap"><div class="ret-bg"><div class="ret-fill" style="width:${ret}%;background:${bc}"></div></div><span class="ret-pct" style="color:${bc}">${ret}%</span></div>`
+          : `<span style="font-size:0.76rem;color:var(--text3)">No reviews yet</span>`}
+      </div>
+      <div><span class="mat-badge" style="background:${mb};color:${mf}">${ml}</span></div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  STUDY SESSION
+// ═══════════════════════════════════════════════════════
+function studyDeck(tag) { studyDeckFilter = tag; showView('study'); }
+
+function startSession() {
+  let pool = studyDeckFilter
+    ? cards.filter(c => (c.tag||'General') === studyDeckFilter && isDue(c))
+    : cards.filter(c => isDue(c));
+  studyDeckFilter = null;
+
+  const newCards = pool.filter(c => isNew(c)).slice(0, 20);
+  const dueCards = pool.filter(c => !isNew(c));
+  sessionQueue   = [...dueCards, ...newCards];
+  currentIndex   = 0; sessionReviewed = 0; sessionTotal = sessionQueue.length;
+
+  document.getElementById('session-complete').style.display = 'none';
+  document.getElementById('study-content').style.display   = 'block';
+  if (!sessionQueue.length) { showSessionComplete(); return; }
+  loadCard();
+}
+
+function loadCard() {
+  if (currentIndex >= sessionQueue.length) { showSessionComplete(); return; }
+  const card = sessionQueue[currentIndex];
+  cardFlipped = false; answerRevealed = false;
+
+  document.getElementById('card-tag').textContent      = card.tag || 'General';
+  document.getElementById('card-question').textContent = card.question;
+  document.getElementById('card-answer').textContent   = card.answer;
+  document.getElementById('card-hint').textContent     = 'Tap card or press Space to flip';
+  document.getElementById('study-card').classList.remove('flipped');
+  document.getElementById('card-front').scrollTop = 0;
+  document.getElementById('card-back').scrollTop  = 0;
+  document.getElementById('show-answer-btn').style.display = 'block';
+  document.getElementById('rating-area').classList.remove('visible');
+
+  const pct = sessionTotal > 0 ? (sessionReviewed / sessionTotal) * 100 : 0;
+  document.getElementById('study-progress').style.width = pct + '%';
+  document.getElementById('study-count').textContent    = (sessionTotal - currentIndex) + ' remaining';
+
+  document.getElementById('iv1').textContent = '<1m';
+  document.getElementById('iv2').textContent = previewInterval(card, 2);
+  document.getElementById('iv3').textContent = previewInterval(card, 3);
+  document.getElementById('iv4').textContent = previewInterval(card, 4);
+}
+
+function toggleFlip() {
+  cardFlipped = !cardFlipped;
+  document.getElementById('study-card').classList.toggle('flipped', cardFlipped);
+  if (cardFlipped && !answerRevealed) {
+    answerRevealed = true;
+    document.getElementById('show-answer-btn').style.display = 'none';
+    document.getElementById('rating-area').classList.add('visible');
+  }
+}
+function revealAnswer() { if (!cardFlipped) toggleFlip(); }
+
+async function rateCard(quality) {
+  const idx = cards.findIndex(c => c.id === sessionQueue[currentIndex].id);
+  const tag = (idx !== -1 ? cards[idx].tag : null) || 'General';
+  if (idx !== -1) {
+    cards[idx] = sm2(cards[idx], quality);
+    if (quality === 1) sessionQueue.push({ ...cards[idx] });
+  }
+  recordReview(tag, quality);
+  bumpStreak();
+
+  // Save locally immediately, push to GitHub silently
+  await save(true);
+
+  sessionTotal = sessionQueue.length;
+  sessionReviewed++; currentIndex++;
+  loadCard();
+}
+
+function showSessionComplete() {
+  document.getElementById('session-complete').style.display = 'block';
+  document.getElementById('study-content').style.display   = 'none';
+  document.getElementById('session-summary').textContent   = sessionReviewed > 0
+    ? `You reviewed ${sessionReviewed} card${sessionReviewed !== 1 ? 's' : ''}. Great work!`
+    : 'Nothing due — come back tomorrow!';
+}
+function endSession() { sessionQueue = []; showView('dashboard'); }
+
+// ═══════════════════════════════════════════════════════
+//  CARDS TABLE
+// ═══════════════════════════════════════════════════════
+function renderCardsTable() {
+  const q   = (document.getElementById('search-input')?.value || '').toLowerCase();
+  const tag = document.getElementById('filter-tag')?.value || '';
+  const rows= cards.filter(c =>
+    (!q   || c.question.toLowerCase().includes(q) || c.answer.toLowerCase().includes(q)) &&
+    (!tag || (c.tag||'General') === tag)
+  );
+  const body = document.getElementById('cards-table-body');
+  if (!rows.length) {
+    body.innerHTML = `<div class="empty-state"><div class="icon">🔍</div><h3>No cards found</h3><p>Try adjusting your search.</p></div>`;
+    return;
+  }
+  body.innerHTML = rows.map(c => {
+    const nd = c.nextDue
+      ? (c.nextDue <= today() ? '<span style="color:var(--red)">Due</span>' : fmtDate(c.nextDue))
+      : '<span style="color:var(--blue)">New</span>';
+    return `<div class="card-row">
+      <div class="card-row-text">${esc(c.question)}</div>
+      <div class="card-row-text" style="color:var(--text2)">${esc(c.answer)}</div>
+      <div><span class="card-row-tag">${esc(c.tag||'General')}</span></div>
+      <div style="font-size:0.78rem;color:var(--text3);font-family:'DM Mono',monospace">${nd}</div>
+      <div class="card-row-actions">
+        <button class="icon-btn" onclick="editCard('${c.id}')" title="Edit">✎</button>
+        <button class="icon-btn del" onclick="deleteCard('${c.id}')" title="Delete">✕</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function populateTagFilter() {
+  const tags = [...new Set(cards.map(c => c.tag||'General'))].sort();
+  const sel  = document.getElementById('filter-tag');
+  const cur  = sel.value;
+  sel.innerHTML = '<option value="">All decks</option>' + tags.map(t => `<option value="${esc(t)}">${esc(t)}</option>`).join('');
+  sel.value = cur;
+  const dl = document.getElementById('tag-datalist');
+  if (dl) dl.innerHTML = tags.map(t => `<option value="${esc(t)}">`).join('');
+}
+
+function editCard(id) {
+  const c = cards.find(c => c.id === id); if (!c) return;
+  editingId = id;
+  document.getElementById('modal-title').textContent   = 'Edit Card';
+  document.getElementById('input-question').value      = c.question;
+  document.getElementById('input-answer').value        = c.answer;
+  document.getElementById('input-tag').value           = c.tag || '';
+  openModal('addModal');
+}
+
+function deleteCard(id) {
+  if (!confirm('Delete this card? Cannot be undone.')) return;
+  cards = cards.filter(c => c.id !== id);
+  save(); renderCardsTable();
+  toast('Card deleted', 'success');
+}
+
+// ═══════════════════════════════════════════════════════
+//  ADD / EDIT CARD
+// ═══════════════════════════════════════════════════════
+async function saveCard() {
+  const question = document.getElementById('input-question').value.trim();
+  const answer   = document.getElementById('input-answer').value.trim();
+  const tag      = document.getElementById('input-tag').value.trim() || 'General';
+  if (!question || !answer) { toast('Fill in question and answer', 'error'); return; }
+
+  if (editingId) {
+    const i = cards.findIndex(c => c.id === editingId);
+    if (i !== -1) Object.assign(cards[i], { question, answer, tag });
+    editingId = null; toast('Card updated', 'success');
+  } else {
+    cards.push({ id: uid(), question, answer, tag, reps:0, interval:1, easeFactor:2.5, nextDue:today(), lastReviewed:null });
+    toast('Card added', 'success');
+  }
+  await save(); closeModal('addModal'); renderDashboard();
+}
+
+// ═══════════════════════════════════════════════════════
+//  IMPORT / EXPORT
+// ═══════════════════════════════════════════════════════
+function exportData() {
+  const blob = new Blob([JSON.stringify(cards, null, 2)], { type:'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'paeds-cards-' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  toast('Exported ' + cards.length + ' cards', 'success');
+}
+function copyToClipboard() {
+  navigator.clipboard.writeText(JSON.stringify(cards, null, 2))
+    .then(() => toast('Copied', 'success'))
+    .catch(() => toast('Copy failed — use export', 'error'));
+}
+
+function handleFileImport(e) {
+  const file = e.target.files[0]; if (!file) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      pendingImportData = JSON.parse(ev.target.result);
+      if (!Array.isArray(pendingImportData)) throw new Error('Expected an array');
+      openModal('importModal');
+    } catch(err) { toast('Invalid JSON: ' + err.message, 'error'); }
+  };
+  r.readAsText(file); e.target.value = '';
+}
+function importPasted() {
+  const text = document.getElementById('paste-json').value.trim();
+  if (!text) { toast('Nothing to import', 'error'); return; }
+  try {
+    pendingImportData = JSON.parse(text);
+    if (!Array.isArray(pendingImportData)) throw new Error('Expected an array');
+    doImport('merge');
+  } catch(err) { toast('Invalid JSON: ' + err.message, 'error'); }
+}
+async function doImport(mode) {
+  if (!pendingImportData) return;
+  closeModal('importModal');
+  if (mode === 'replace') {
+    cards = normalise(pendingImportData);
+    toast('Replaced with ' + cards.length + ' cards', 'success');
+  } else {
+    const incoming = normalise(pendingImportData);
+    let added = 0, kept = 0;
+    incoming.forEach(nc => { if (cards.find(c => c.id === nc.id)) kept++; else { cards.push(nc); added++; } });
+    toast(`Imported: ${added} new, ${kept} existed`, 'success');
+  }
+  await save(); pendingImportData = null;
+  document.getElementById('paste-json').value = '';
+  renderDashboard();
+}
+
+function normalise(data) {
+  return data.map(c => ({
+    id: c.id || uid(), question: c.question||'', answer: c.answer||'', tag: c.tag||'General',
+    reps: c.reps||0, interval: c.interval||1, easeFactor: c.easeFactor||2.5,
+    nextDue: c.nextDue||today(), lastReviewed: c.lastReviewed||null
+  }));
+}
+
+// Drag & drop
+const dz = document.getElementById('drop-zone');
+if (dz) {
+  dz.addEventListener('dragover',  e => { e.preventDefault(); dz.classList.add('drag-over'); });
+  dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
+  dz.addEventListener('drop', e => {
+    e.preventDefault(); dz.classList.remove('drag-over');
+    const file = e.dataTransfer.files[0]; if (!file) return;
+    const r = new FileReader();
+    r.onload = ev => {
+      try { pendingImportData = JSON.parse(ev.target.result); openModal('importModal'); }
+      catch(err) { toast('Invalid file', 'error'); }
+    };
+    r.readAsText(file);
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  MODALS
+// ═══════════════════════════════════════════════════════
+function openModal(id) {
+  if (id === 'addModal') {
+    document.getElementById('modal-title').textContent = editingId ? 'Edit Card' : 'Add New Card';
+    if (!editingId) {
+      document.getElementById('input-question').value = '';
+      document.getElementById('input-answer').value   = '';
+      document.getElementById('input-tag').value      = '';
+    }
+    populateTagFilter();
+  }
+  if (id === 'ghSetupModal') {
+    prefillSetupModal();
+    document.getElementById('gh-test-result').style.display = 'none';
+  }
+  document.getElementById(id).classList.add('open');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  if (id === 'addModal') editingId = null;
+}
+document.querySelectorAll('.modal-overlay').forEach(m =>
+  m.addEventListener('click', e => { if (e.target === m) closeModal(m.id); })
+);
+
+// ═══════════════════════════════════════════════════════
+//  KEYBOARD
+// ═══════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (document.querySelector('.modal-overlay.open')) {
+    if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+    return;
+  }
+  const studyActive = document.getElementById('view-study').classList.contains('active');
+  if (!studyActive || !sessionQueue.length || currentIndex >= sessionQueue.length) return;
+  if (e.key === ' ') { e.preventDefault(); toggleFlip(); return; }
+  if (answerRevealed) {
+    if (e.key === '1') rateCard(1);
+    if (e.key === '2') rateCard(2);
+    if (e.key === '3') rateCard(3);
+    if (e.key === '4') rateCard(4);
+  }
+});
+
+// ═══════════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════════
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,8); }
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmtDate(d) {
+  const diff = d - today();
+  if (diff === 1) return 'Tomorrow';
+  if (diff <= 7)  return 'in ' + diff + 'd';
+  return new Date(d*86400000).toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+}
+let _toastTimer;
+function toast(msg, type='') {
+  const el = document.getElementById('toast');
+  el.textContent = (type==='success'?'✓ ':type==='error'?'✗ ':type==='info'?'ℹ ':'') + msg;
+  el.className   = 'toast show ' + type;
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => el.classList.remove('show'), 3500);
+}
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+async function init() {
+  const ls = document.getElementById('loading-screen');
+  const lm = document.getElementById('loading-msg');
+
+  loadLocal();        // load cached data immediately
+  loadGhConfig();     // load GitHub config
+
+  if (ghCfg) {
+    lm.textContent = 'Fetching from GitHub…';
+    document.getElementById('sync-btn').style.display = 'inline-flex';
+    await fetchFromGitHub(false);
+  } else {
+    lm.textContent = 'Loading local data…';
+    await new Promise(r => setTimeout(r, 300)); // brief pause so screen is visible
+  }
+
+  // Hide loading screen
+  ls.style.opacity = '0';
+  ls.style.transition = 'opacity 0.3s';
+  setTimeout(() => ls.style.display = 'none', 320);
+
+  updateSyncPillFromTimestamp();
+  updateSettingsPanel();
+  renderDashboard();
+
+  // Refresh sync pill label every minute
+  setInterval(updateSyncPillFromTimestamp, 60000);
+}
+
+init();
+</script>
+</body>
+</html>

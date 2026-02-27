@@ -5,11 +5,11 @@
       "question": "List the three mechanical layers of the Glomerular Filtration Barrier and the primary proteins of the final sieve.",
       "answer": "1.fenestrated endothelium of the capillaries (restricts cells and large molucules)\n2. glomerular basement membrane (type 4 collagen, negative charge)\n3. podocyte foot processes (slit diaphragms prevent large molecules entering)",
       "tag": "Nephrology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20512,
+      "lastReviewed": 1772205010728
     },
     {
       "id": "nxfcqb0hm5",
@@ -6007,5 +6007,11 @@
       "lastReviewed": null
     }
   ],
-  "stats": {}
+  "stats": {
+    "Nephrology": {
+      "reviews": 1,
+      "good": 1,
+      "again": 0
+    }
+  }
 }

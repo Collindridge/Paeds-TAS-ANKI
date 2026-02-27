@@ -49,11 +49,11 @@
       "question": "Contrast the molecular targets and calcium excretion profiles of Bartter and Gitelman syndromes.",
       "answer": "bartter: thick ascending limb; NKCC2 transporter; High urine Ca; low urine Mg\nGitelman: DCT; NCC transporter; low urine ca; high urine Mg",
       "tag": "Nephrology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20512,
+      "lastReviewed": 1772205042311
     },
     {
       "id": "6mz2zdvig4",
@@ -6009,8 +6009,8 @@
   ],
   "stats": {
     "Nephrology": {
-      "reviews": 4,
-      "good": 4,
+      "reviews": 5,
+      "good": 5,
       "again": 0
     }
   }

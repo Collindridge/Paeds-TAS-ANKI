@@ -60,11 +60,11 @@
       "question": "compare the urinalysis of gitelman and bartter syndromes",
       "answer": "barter: high calcium; normal magnesium\ngitelman: normal calcium; high magnesium \n(in the urine!! - opposite in the blood)",
       "tag": "Nephrology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20512,
+      "lastReviewed": 1772205056608
     },
     {
       "id": "ukgzqykmo8",
@@ -6009,8 +6009,8 @@
   ],
   "stats": {
     "Nephrology": {
-      "reviews": 5,
-      "good": 5,
+      "reviews": 6,
+      "good": 6,
       "again": 0
     }
   }

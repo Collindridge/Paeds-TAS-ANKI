@@ -269,11 +269,11 @@
       "question": "Anatomy and Embryology of PUV",
       "answer": "PUV occurs exclusively in males\nValves form within the prostatic urethra from failure of Wolffian ducts to regress",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772260035203
     },
     {
       "id": "jqppnni6xp",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 28,
-      "good": 28,
+      "reviews": 29,
+      "good": 29,
       "again": 0
     },
     "Gastroenterology and hepatology": {

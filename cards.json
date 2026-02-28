@@ -159,11 +159,11 @@
       "question": "which transporter and segment is affected in gitelman syndrome? what is the ultimate biochemical changes?",
       "answer": "NCC transporter in the DCT and \n1. hypokalaemia - improper recollection from the NCC transporter and later swapping with na to recover salt. \n2. alkalosis - H+ is swapped with Na+ to recover this in the collecting duct\n3. low magnesium - normally recovered in the DCT\n\ncalcium is usually nromal to distinguish from bartter",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20513,
+      "lastReviewed": 1772259481262
     },
     {
       "id": "vqrtr11e82",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 18,
-      "good": 18,
+      "reviews": 19,
+      "good": 19,
       "again": 0
     }
   }

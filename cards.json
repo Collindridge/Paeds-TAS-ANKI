@@ -170,11 +170,11 @@
       "question": "A child presents with failure to thrive, metabolic acidosis and rickets. hat is the diagnosis?",
       "answer": "fanconi syndrome",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259493715
     },
     {
       "id": "xwoz6injbo",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 19,
-      "good": 19,
+      "reviews": 20,
+      "good": 20,
       "again": 0
     }
   }

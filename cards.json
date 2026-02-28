@@ -115,11 +115,11 @@
       "question": "In nephrotic syndrome, what is the key symptom and key lab finding?",
       "answer": "Generalised oedema and massive proteinuria",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259371959
     },
     {
       "id": "n2krs1ltas",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 14,
-      "good": 14,
+      "reviews": 15,
+      "good": 15,
       "again": 0
     }
   }

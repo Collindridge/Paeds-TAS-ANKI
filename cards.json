@@ -214,11 +214,11 @@
       "question": "Inheritance pattern of VUR",
       "answer": "Debated but thought to be AD with variable expression. consider testing siblings if similar symptoms",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259559645
     },
     {
       "id": "wajeefeb73",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 23,
-      "good": 23,
+      "reviews": 24,
+      "good": 24,
       "again": 0
     }
   }

@@ -71,11 +71,11 @@
       "question": "what is the site of disorder in nephrotic disorders?",
       "answer": "the glomerulus",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20513,
+      "lastReviewed": 1772259319201
     },
     {
       "id": "a3fwvpuryn",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 10,
-      "good": 10,
+      "reviews": 11,
+      "good": 11,
       "again": 0
     }
   }

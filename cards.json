@@ -247,11 +247,11 @@
       "question": "What are the two main tests used to diagnose And assess damage in vesicoureteric reflux?",
       "answer": "1. MCUG is the diagnostic test of choice and demonstrates reflux of urine back into the ureters\n2. DMSA (Dimercaptosuccinic Acid) scan is used to assess for renal scarring but this has done 4 to 6 months later once the initial inflammation has settled down",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259597531
     },
     {
       "id": "6sqnl38g5q",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 26,
-      "good": 26,
+      "reviews": 27,
+      "good": 27,
       "again": 0
     }
   }

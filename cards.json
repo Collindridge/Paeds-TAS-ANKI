@@ -236,11 +236,11 @@
       "question": "Long-term effects of VUR",
       "answer": "Grade 1 and 2 often resolve spontaneously. \nHowever if they don't they can cause renal failure including hypertension",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20513,
+      "lastReviewed": 1772259578265
     },
     {
       "id": "4ny9yhxxzr",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 25,
-      "good": 25,
+      "reviews": 26,
+      "good": 26,
       "again": 0
     }
   }

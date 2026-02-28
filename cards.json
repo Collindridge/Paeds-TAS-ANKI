@@ -82,11 +82,11 @@
       "question": "In tubulopathy, what is the site of the problem?",
       "answer": "Various transporters depending on the specific pathology",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259329152
     },
     {
       "id": "ubnzy304dm",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 11,
-      "good": 11,
+      "reviews": 12,
+      "good": 12,
       "again": 0
     }
   }

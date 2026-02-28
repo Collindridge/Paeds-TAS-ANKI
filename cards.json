@@ -203,11 +203,11 @@
       "question": "What is vesico-ureteral reflux",
       "answer": "his is reflux of urine from the bladder to the ureter. it is due to failure of the one way valve at the VUJ",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259549109
     },
     {
       "id": "qpc7eph4nb",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 22,
-      "good": 22,
+      "reviews": 23,
+      "good": 23,
       "again": 0
     }
   }

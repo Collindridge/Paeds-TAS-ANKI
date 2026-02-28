@@ -93,11 +93,11 @@
       "question": "What is the main function of the cortical components of the nephron?",
       "answer": "Ultrafiltration",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259339604
     },
     {
       "id": "jl33pedabs",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 12,
-      "good": 12,
+      "reviews": 13,
+      "good": 13,
       "again": 0
     }
   }

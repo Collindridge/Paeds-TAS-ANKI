@@ -225,11 +225,11 @@
       "question": "Main presenting problem with VUR",
       "answer": "Recurrent UTI is classic",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259571597
     },
     {
       "id": "60zslyyitw",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 24,
-      "good": 24,
+      "reviews": 25,
+      "good": 25,
       "again": 0
     }
   }

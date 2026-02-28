@@ -192,11 +192,11 @@
       "question": "a 16 year old boy is being investigated for constipation. he is dehydrated and is sufferring with muscle cramps. His blood work reveals low magnesium and a metabolic alkalosis. what is the diagnosis?",
       "answer": "Gitelman syndrome",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259533492
     },
     {
       "id": "p8fotrp12f",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 21,
-      "good": 21,
+      "reviews": 22,
+      "good": 22,
       "again": 0
     }
   }

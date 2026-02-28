@@ -137,11 +137,11 @@
       "question": "hat is the classic triad seen in fanconi syndrome and why?",
       "answer": "1.failure to thrive (loss of glucose and amino acids)\n2.acidosis - loss of bicarb\n3. rickets -  loss of phosphate\n\nall from the pct",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20513,
+      "lastReviewed": 1772259404795
     },
     {
       "id": "4euc8j9umm",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 16,
-      "good": 16,
+      "reviews": 17,
+      "good": 17,
       "again": 0
     }
   }

@@ -148,11 +148,11 @@
       "question": "which transporter and segment is affected in bartter syndrome. what are the biochemical changes?",
       "answer": "thick ascending limb and the NKCC2 transporter\n1. hypokalaemia - not reabsorbed properly and then exchanged in collecting duct for sodium reabsorption\n2. metabolic alkalosis - hydrogen is swapped for na in the collecting ducts\n3. low calcium - normally the NKCC2 transporter reabsorbs na, k, and 2 cl-. the k+ then leaks back into the tubule, creating an overall +ve balance. when this fails, there is no positive charge to push the mg2+ and ca2+ into the blood stream. magnesium is recovered in the dct",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
       "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "nextDue": 20513,
+      "lastReviewed": 1772259448487
     },
     {
       "id": "cvpzsewe9x",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 17,
-      "good": 17,
+      "reviews": 18,
+      "good": 18,
       "again": 0
     }
   }

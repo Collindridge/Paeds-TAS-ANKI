@@ -258,11 +258,11 @@
       "question": "What are the medical and surgical treatments for vesico-ureteric reflux?",
       "answer": "1. Prophylactic antibiotics can be given but this is only in grade 3 or four disease or those with recurrent UTIs\n2. Surgical treatment includes ureteric reimplantation which involves physically lengthening the submucosal tunnel",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259611916
     },
     {
       "id": "kg14n8z79p",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 27,
-      "good": 27,
+      "reviews": 28,
+      "good": 28,
       "again": 0
     }
   }

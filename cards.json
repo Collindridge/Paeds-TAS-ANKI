@@ -126,11 +126,11 @@
       "question": "In tubulopathies what is the key symptom and Key finding?",
       "answer": "Electrolytes and acid base shift",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259384775
     },
     {
       "id": "k1tgycjhh4",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 15,
-      "good": 15,
+      "reviews": 16,
+      "good": 16,
       "again": 0
     }
   }

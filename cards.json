@@ -181,11 +181,11 @@
       "question": "a mother has polyhydramnios. the baby is found to have low potassium, a metabolic alkalosis and caclium in the urine. what is the diagnosis?",
       "answer": "Bartter syndrome",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259518885
     },
     {
       "id": "q2kxa2d3wd",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 20,
-      "good": 20,
+      "reviews": 21,
+      "good": 21,
       "again": 0
     }
   }

@@ -104,11 +104,11 @@
       "question": "What is the primary function of the medullary components of the nephron?",
       "answer": "concentration/dilution\no tubulopathies don't leak protein",
       "tag": "Nephro-urology",
-      "reps": 0,
+      "reps": 1,
       "interval": 1,
-      "easeFactor": 2.5,
-      "nextDue": 20511,
-      "lastReviewed": null
+      "easeFactor": 2.6,
+      "nextDue": 20513,
+      "lastReviewed": 1772259362708
     },
     {
       "id": "xsms4w04ao",
@@ -7054,8 +7054,8 @@
   ],
   "stats": {
     "Nephro-urology": {
-      "reviews": 13,
-      "good": 13,
+      "reviews": 14,
+      "good": 14,
       "again": 0
     }
   }
